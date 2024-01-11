@@ -41,6 +41,9 @@ export default function Index() {
         </div>
 
         <div className={styles.heroActions}>
+          <Button icon={<SignInIcon />} onClick={() => signIn()}>
+            Sign in
+          </Button>
           <a
             className="mr-10 NavLink product"
             href="https://collaborating.deform.cc/fantom"
