@@ -1,12 +1,9 @@
 import clsx from "clsx";
 import { GetServerSideProps } from "next";
-import { signIn } from "next-auth/react";
 import { ComponentProps, ReactNode } from "react";
 import { DASHBOARD_URL } from "../constants";
-import { SignInIcon } from "../icons";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
-import { Button, LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
 import styles from "./index.module.css";
 
