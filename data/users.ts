@@ -31,10 +31,10 @@ export const users: Omit<User, "color">[] = [
     ],
   },
   {
-    id: "mislav.abha@example.com",
-    name: "Mislav Abha",
+    id: "sheepstitsmead@gmail.com",
+    name: "Bidlo Perv",
     avatar: "https://liveblocks.io/avatars/avatar-3.png",
-    groupIds: ["engineering"],
+    groupIds: ["Love on FTM", "Kissing Beaver"],
   },
   {
     id: "tatum.paolo@example.com",

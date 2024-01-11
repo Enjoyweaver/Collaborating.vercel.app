@@ -44,6 +44,18 @@ export default function Index() {
           <Button icon={<SignInIcon />} onClick={() => signIn()}>
             Sign in
           </Button>
+          <a
+            className="mr-10 NavLink product"
+            href="https://collaborating.deform.cc/fantom"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="effect-1"></div>
+            <div className="effect-2"></div>
+            <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
+              Form to Collaborate
+            </span>
+          </a>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
             target="_blank"

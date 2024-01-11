@@ -16,7 +16,7 @@ export function MarketingFooter({
       <Container className={styles.container}>
         <span className={styles.copyright}>Collaborating on Fantom</span>
         <LinkButton
-          href="https://github.com/enjoyweaver/collaborating"
+          href="https://github.com/enjoyweaver/collaborating.vercel.app"
           icon={<GitHubIcon />}
           target="_blank"
           variant="secondary"
