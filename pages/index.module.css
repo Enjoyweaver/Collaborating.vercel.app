@@ -52,3 +52,17 @@
 .featuresFeatureDescription {
   font-size: var(--size-sm);
 }
+
+.collaborationTasks {
+  margin-top: 1rem; /* Add some space between project description and collaboration tasks */
+}
+
+.collaborationTasksTitle {
+  font-size: 1rem; /* Set the font size to match the project title and description */
+  margin-bottom: 0.5rem; /* Add some space below the title */
+}
+
+.collaborationTasksList {
+  list-style-type: disc; /* Add bullet points to the tasks */
+  margin-left: 1.5rem; /* Adjust the left margin for the bullet points */
+}
