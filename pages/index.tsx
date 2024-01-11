@@ -265,7 +265,7 @@ export default function Index() {
               <>
                 Web3 risk and insurance. Right now our focus is on building an
                 exploit database and dashboard, exploit education, wallet
-                insurance, and certifying web3's future crypto auditors,
+                insurance, and certifying web3&apos;s future crypto auditors,
                 underwriters, and actuaries.
               </>
             }
