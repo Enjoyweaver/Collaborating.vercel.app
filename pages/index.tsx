@@ -93,67 +93,11 @@ export default function Index() {
               </>
             }
             title="DAOstination DAO"
-          />
-          <Feature
-            description={
-              <>
-                Best practices followed, using a mixture of SSR and custom API
-                endpoints. Modify documents from both client and server.
-              </>
-            }
-            title="Next.js"
-          />
-          <Feature
-            description={
-              <>
-                Adjust our reusable interface & design system to fit your needs.
-              </>
-            }
-            title="User Interface"
-          />
-          <Feature
-            description={
-              <>
-                All custom client and server functions are fully typed, and easy
-                to update.
-              </>
-            }
-            title="TypeScript"
-          />
-          <Feature
-            description={
-              <>
-                Complete authentication, compatible with any NextAuth provider,
-                including GitHub, Google, Auth0, and many more.
-              </>
-            }
-            title="NextAuth.js"
-          />
-          <Feature
-            description={
-              <>
-                See data update live using the SWR (state-while-revalidate)
-                library.
-              </>
-            }
-            title="SWR"
-          />
-        </div>
-      </Container>
-      <Container className={styles.section}>
-        <h2 className={styles.sectionTitle}>
-          Below are the features describing the Liveblocks collaborative app we
-          are using.
-        </h2>
-        <div className={styles.featuresGrid}>
-          <Feature
-            description={
-              <>
-                A collaborative whiteboard app with included share menu,
-                documents listing, users, groups, permissions, and more.
-              </>
-            }
-            title="Liveblocks"
+            collaborationTasks={[
+              "Create website UI/UX",
+              "Write smart contracts",
+              "DAO manager",
+            ]}
           />
           <Feature
             description={
