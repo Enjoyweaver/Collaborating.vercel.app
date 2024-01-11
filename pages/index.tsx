@@ -61,10 +61,27 @@ export default function Index() {
           </h1>
           <p className={styles.heroLead}>
             Review the items and projects below wanting your collaboration, and
-            if you want to complete them then fill out the form below. Whether
-            you want to list your project or list your skills for collaboration,
-            this is the place to do it and you can fill out the same form below,
-            which was created using DeForm App.
+            if you want to complete any, then fill out the form to collaborate.
+          </p>
+          <p className={styles.heroLead}>
+            Whether you want to list your project or list your skills for
+            collaboration, this is the place to do it and you can fill out the
+            same form below, which was created using DeForm App.
+          </p>
+          <p className={styles.heroLead}>
+            As of now, all collaboration will be funded by several tokens, with
+            the first one being Kissing Beaver, which was created solely to fund
+            collaboration on Fantom. Each month, we receive 273,420,000 (
+            <a
+              href="https://ftmscan.com/token/0x20f4e1977be369ac53e847715aaeb9e0f3302ccb"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              $beaver
+            </a>
+            ) tokens and will distribute them to the collaborators for that
+            month, and will soon build a dashboard showing the previous
+            collaborations.
           </p>
         </div>
 
@@ -106,7 +123,7 @@ export default function Index() {
               "Write smart contracts",
               "DAO manager",
             ]}
-            twitterLink="https://twitter.com/DAOstination" // Add the Twitter link here
+            twitterLink="https://twitter.com/DAOstination"
           />
 
           <Feature
@@ -123,11 +140,13 @@ export default function Index() {
               "Help design and build the UI/UX to pay collaborators",
               "DAO manager",
             ]}
+            twitterLink="https://twitter.com/_Collaborating"
           />
           <Feature
             description={
               <>
-                Adjust our reusable interface & design system to fit your needs.
+                A place for aspiring fashion designers to start their career,
+                get global exposure, and to get paid with Fantom.
               </>
             }
             title="DAOsigner Apparel"
@@ -135,6 +154,7 @@ export default function Index() {
               "Design and build crypto payment system",
               "Help design and build the UI/UX to pay DAOsigners",
             ]}
+            twitterLink="https://twitter.com/DAOsignrApparel"
           />
           <Feature
             description={
@@ -149,6 +169,7 @@ export default function Index() {
               "Create logo and banner",
               "Brainstorm DAO ideas",
             ]}
+            twitterLink="https://twitter.com/_DAOlicious"
           />
           <Feature
             description={
@@ -163,6 +184,7 @@ export default function Index() {
               "Design and build website",
               "Create NFTs for almost every project listed here",
             ]}
+            twitterLink="https://twitter.com/Motivate__Labs"
           />
           <Feature
             description={
@@ -176,6 +198,7 @@ export default function Index() {
               "Assist in implementing Fantom Fluid",
               "Design and build website",
             ]}
+            twitterLink="https://twitter.com/FantomFluid"
           />
           <Feature
             description={
@@ -191,6 +214,7 @@ export default function Index() {
               "Write smart contracts to pay journalists in fantom daily",
               "Design subscription system",
             ]}
+            twitterLink="https://twitter.com/HappyNewsDAO"
           />
           <Feature
             description={
@@ -205,6 +229,7 @@ export default function Index() {
               "Help design a swap that favors the artists and daily users",
               "Design and build website",
             ]}
+            twitterLink="https://twitter.com/ProvenanceDeFi"
           />
           <Feature
             description={
@@ -219,6 +244,7 @@ export default function Index() {
               "Design and build website",
               "Help design and build the UI/UX to pay authors and writers",
             ]}
+            twitterLink="https://twitter.com/WriteOnDAO"
           />
           <Feature
             description={
@@ -232,17 +258,20 @@ export default function Index() {
               "Create logo and banner",
               "Brainstorm DAO ideas",
             ]}
+            twitterLink="https://twitter.com/DAOcumentaryDAO"
           />
           <Feature
             description={
               <>
-                Making 3D art for projects on Fantom, whether its NFTs or 3D
-                models for games, we are here to collaborate.
+                Web3 risk and insurance. Right now our focus is on building an
+                exploit database and dashboard, exploit education, wallet
+                insurance, and certifying web3's future crypto auditors,
+                underwriters, and actuaries.
               </>
             }
-            title="Motivate Labs"
+            title="inDemniFi Crypto"
             collaborationTasks={[
-              "Create 3D logo",
+              "Help write ",
               "Design and build website",
               "Create NFTs for almost every project listed here",
             ]}
