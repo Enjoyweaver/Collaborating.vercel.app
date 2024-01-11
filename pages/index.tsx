@@ -13,13 +13,30 @@ import styles from "./index.module.css";
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   description: ReactNode;
   title: ReactNode;
+  collaborationTasks?: string[]; // Added collaborationTasks prop
 }
 
-function Feature({ title, description, className, ...props }: FeatureProps) {
+function Feature({
+  title,
+  description,
+  collaborationTasks,
+  className,
+  ...props
+}: FeatureProps) {
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
       <h4 className={styles.featuresFeatureTitle}>{title}</h4>
       <p className={styles.featuresFeatureDescription}>{description}</p>
+      {collaborationTasks && (
+        <div className={styles.collaborationTasks}>
+          <h5>Collaboration Tasks</h5>
+          <ul>
+            {collaborationTasks.map((task, index) => (
+              <li key={index}>{task}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
@@ -41,10 +58,7 @@ export default function Index() {
         </div>
 
         <div className={styles.heroActions}>
-          <Button icon={<SignInIcon />} onClick={() => signIn()}>
-            Sign in
-          </Button>
-          <a
+          <LinkButton
             className="mr-10 NavLink product"
             href="https://collaborating.deform.cc/fantom"
             target="_blank"
@@ -55,7 +69,7 @@ export default function Index() {
             <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
               Form to Collaborate
             </span>
-          </a>
+          </LinkButton>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
             target="_blank"
@@ -66,7 +80,81 @@ export default function Index() {
         </div>
       </Container>
       <Container className={styles.section}>
-        <h2 className={styles.sectionTitle}>Features</h2>
+        <h2 className={styles.sectionTitle}>
+          The list of projects on Fantom wanting your collaboration.
+        </h2>
+        <div className={styles.featuresGrid}>
+          <Feature
+            description={
+              <>
+                Members fund the rental / purchase of a DAOstination and
+                examples could be a large house for themselves for ETH Denver or
+                a downtown bungalow in San Francisco that each member gets a
+                week out of the year.
+              </>
+            }
+            title="DAOstination DAO"
+            collaborationTasks={[
+              "Create website UI/UX",
+              "Write smart contracts",
+              "DAO manager",
+            ]}
+          />
+
+          <Feature
+            description={
+              <>
+                Where projects come to collaborate on Fantom. Whether you need
+                collaboration or want to collaborate, this is where you
+                collaborate on Fantom.
+              </>
+            }
+            title="Collaborating"
+          />
+          <Feature
+            description={
+              <>
+                A place for aspiring fashion designers to start their career,
+                get global exposure, and to get paid with Fantom.
+              </>
+            }
+            title="DAOsigner Apparel"
+          />
+          <Feature
+            description={
+              <>
+                All custom client and server functions are fully typed, and easy
+                to update.
+              </>
+            }
+            title="DAOlicious"
+          />
+          <Feature
+            description={
+              <>
+                A DAO for foodies to collaborate on food projects, but this is
+                for you to decide what this DAO does, so join the Discord and
+                help us decide.
+              </>
+            }
+            title="NextAuth.js"
+          />
+          <Feature
+            description={
+              <>
+                See data update live using the SWR (state-while-revalidate)
+                library.
+              </>
+            }
+            title="SWR"
+          />
+        </div>
+      </Container>
+      <Container className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          The features of this collaborative app which was a template from
+          Liveblocks can be seen below.
+        </h2>
         <div className={styles.featuresGrid}>
           <Feature
             description={
