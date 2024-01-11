@@ -78,7 +78,7 @@ export default function Index() {
       </Container>
       <Container className={styles.section}>
         <h2 className={styles.sectionTitle}>
-          Projects on Fantom currently wanting your collaboration
+          Current projects wanting your collaboration
         </h2>
         <div className={styles.featuresGrid}>
           <Feature
