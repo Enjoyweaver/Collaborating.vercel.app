@@ -68,3 +68,8 @@
   list-style-type: disc; /* Add bullet points to the tasks */
   margin-left: 1.5rem; /* Adjust the left margin for the bullet points */
 }
+
+.linkWithSpace {
+  margin-left: 4px; /* Adjust the margin as needed */
+  margin-right: 4px; /* Adjust the margin as needed */
+}

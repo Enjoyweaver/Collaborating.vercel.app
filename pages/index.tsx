@@ -79,6 +79,7 @@ export default function Index() {
               href="https://ftmscan.com/token/0x20f4e1977be369ac53e847715aaeb9e0f3302ccb"
               target="_blank"
               rel="noopener noreferrer"
+              className={styles.linkWithSpace}
             >
               $beaver
             </a>
