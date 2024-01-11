@@ -1,39 +1,25 @@
 import clsx from "clsx";
 import { GetServerSideProps } from "next";
+import { signIn } from "next-auth/react";
 import { ComponentProps, ReactNode } from "react";
 import { DASHBOARD_URL } from "../constants";
+import { SignInIcon } from "../icons";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
+import { Button, LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
 import styles from "./index.module.css";
 
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   description: ReactNode;
   title: ReactNode;
-  collaborationTasks?: string[]; // Added collaborationTasks prop
 }
 
-function Feature({
-  title,
-  description,
-  collaborationTasks,
-  className,
-  ...props
-}: FeatureProps) {
+function Feature({ title, description, className, ...props }: FeatureProps) {
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
       <h4 className={styles.featuresFeatureTitle}>{title}</h4>
       <p className={styles.featuresFeatureDescription}>{description}</p>
-      {collaborationTasks && (
-        <div className={styles.collaborationTasks}>
-          <h5>Collaboration Tasks</h5>
-          <ul>
-            {collaborationTasks.map((task, index) => (
-              <li key={index}>{task}</li>
-            ))}
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
@@ -55,7 +41,7 @@ export default function Index() {
         </div>
 
         <div className={styles.heroActions}>
-          <a
+          <LinkButton
             className="mr-10 NavLink product"
             href="https://collaborating.deform.cc/fantom"
             target="_blank"
@@ -66,7 +52,7 @@ export default function Index() {
             <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
               Form to Collaborate
             </span>
-          </a>
+          </LinkButton>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
             target="_blank"
@@ -91,13 +77,7 @@ export default function Index() {
               </>
             }
             title="DAOstination DAO"
-            collaborationTasks={[
-              "Create website UI/UX",
-              "Write smart contracts",
-              "DAO manager",
-            ]}
           />
-
           <Feature
             description={
               <>
