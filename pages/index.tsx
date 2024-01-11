@@ -27,8 +27,10 @@ function Feature({
       <p className={styles.featuresFeatureDescription}>{description}</p>
       {collaborationTasks && (
         <div className={styles.collaborationTasks}>
-          <h5>Collaboration Tasks</h5>
-          <ul>
+          <h5 className={styles.collaborationTasksTitle}>
+            Collaboration Tasks
+          </h5>
+          <ul className={styles.collaborationTasksList}>
             {collaborationTasks.map((task, index) => (
               <li key={index}>{task}</li>
             ))}
@@ -63,11 +65,7 @@ export default function Index() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className="effect-1"></div>
-            <div className="effect-2"></div>
-            <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
-              Form to Collaborate
-            </span>
+            <span>Form to Collaborate</span>
           </LinkButton>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
