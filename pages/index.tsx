@@ -100,11 +100,17 @@ export default function Index() {
           <Feature
             description={
               <>
-                Best practices followed, using a mixture of SSR and custom API
-                endpoints. Modify documents from both client and server.
+                Where projects come to collaborate on Fantom. Whether you need
+                collaboration or want to collaborate, this is where you
+                collaborate on Fantom.
               </>
             }
-            title="Next.js"
+            title="Collaborating"
+            collaborationTasks={[
+              "Design and build smart contracts to pay collaborators",
+              "Help design and build the UI/UX to pay collaborators",
+              "DAO manager",
+            ]}
           />
           <Feature
             description={
@@ -112,34 +118,135 @@ export default function Index() {
                 Adjust our reusable interface & design system to fit your needs.
               </>
             }
-            title="User Interface"
+            title="DAOsigner Apparel"
+            collaborationTasks={[
+              "Design and build crypto payment system",
+              "Help design and build the UI/UX to pay DAOsigners",
+            ]}
           />
           <Feature
             description={
               <>
-                All custom client and server functions are fully typed, and easy
-                to update.
+                A DAO for foodies to collaborate on food projects, but this is
+                for you to decide what this DAO does, so join the Discord and
+                help us decide.
               </>
             }
-            title="TypeScript"
+            title="DAOlicious"
+            collaborationTasks={[
+              "Create logo and banner",
+              "Brainstorm DAO ideas",
+            ]}
           />
           <Feature
             description={
               <>
-                Complete authentication, compatible with any NextAuth provider,
-                including GitHub, Google, Auth0, and many more.
+                Making 3D art for projects on Fantom, whether its NFTs or 3D
+                models for games, we are here to collaborate.
               </>
             }
-            title="NextAuth.js"
+            title="Motivate Labs"
+            collaborationTasks={[
+              "Create 3D logo",
+              "Design and build website",
+              "Create NFTs for almost every project listed here",
+            ]}
           />
           <Feature
             description={
               <>
-                See data update live using the SWR (state-while-revalidate)
-                library.
+                Forking SuperFluid to make Fantom Fluid, which will be the first
+                DeFi protocol on Fantom that allows for streaming payments.
               </>
             }
-            title="SWR"
+            title="Fantom Fluid"
+            collaborationTasks={[
+              "Assist in implementing Fantom Fluid",
+              "Design and build website",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Fresh News from Fresh Voices. Happy News is where new
+                journalists start their career, propvide fresh news, and get
+                paid with Fantom.
+              </>
+            }
+            title="Happy News DAO"
+            collaborationTasks={[
+              "Write fresh news articles",
+              "Write smart contracts to pay journalists in fantom daily",
+              "Design subscription system",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Provenance DeFi will be where you on-board fiat to Fantom and
+                where artists prove provenance and get paid forever for their
+                work.
+              </>
+            }
+            title="Provenace DeFi"
+            collaborationTasks={[
+              "Help design a swap that favors the artists and daily users",
+              "Design and build website",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Some writers deserve to be onchain, some stories deserve to be
+                read on a timeline, but all authors deserve to be paid fairly.
+              </>
+            }
+            title="Write On DAO"
+            collaborationTasks={[
+              "Create logo and banner",
+              "Design and build website",
+              "Help design and build the UI/UX to pay authors and writers",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Members fund and decide on the documentary to be made and the
+                DAOcumentary DAO will make it happen.
+              </>
+            }
+            title="DAOcumentary DAO"
+            collaborationTasks={[
+              "Create logo and banner",
+              "Brainstorm DAO ideas",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Making 3D art for projects on Fantom, whether its NFTs or 3D
+                models for games, we are here to collaborate.
+              </>
+            }
+            title="Motivate Labs"
+            collaborationTasks={[
+              "Create 3D logo",
+              "Design and build website",
+              "Create NFTs for almost every project listed here",
+            ]}
+          />
+          <Feature
+            description={
+              <>
+                Forking SuperFluid to make Fantom Fluid, which will be the first
+                DeFi protocol on Fantom that allows for streaming payments.
+              </>
+            }
+            title="Fantom Fluid"
+            collaborationTasks={[
+              "Assist in implementing Fantom Fluid",
+              "Design and build website",
+            ]}
           />
         </div>
       </Container>
