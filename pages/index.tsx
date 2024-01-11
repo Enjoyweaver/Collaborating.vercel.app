@@ -11,7 +11,8 @@ import styles from "./index.module.css";
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   description: ReactNode;
   title: ReactNode;
-  collaborationTasks?: string[]; // Added collaborationTasks prop
+  collaborationTasks?: string[];
+  twitterLink?: string; // Add the twitterLink property
 }
 
 function Feature({
