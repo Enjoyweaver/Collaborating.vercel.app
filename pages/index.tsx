@@ -19,11 +19,20 @@ function Feature({
   description,
   collaborationTasks,
   className,
+  twitterLink, // Add a new prop for the Twitter link
   ...props
 }: FeatureProps) {
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
-      <h4 className={styles.featuresFeatureTitle}>{title}</h4>
+      <h4 className={styles.featuresFeatureTitle}>
+        {twitterLink ? ( // Check if twitterLink is provided
+          <a href={twitterLink} target="_blank" rel="noopener noreferrer">
+            {title}
+          </a>
+        ) : (
+          title
+        )}
+      </h4>
       <p className={styles.featuresFeatureDescription}>{description}</p>
       {collaborationTasks && (
         <div className={styles.collaborationTasks}>
@@ -82,6 +91,7 @@ export default function Index() {
         </h2>
         <div className={styles.featuresGrid}>
           <Feature
+            title="DAOstination DAO"
             description={
               <>
                 Members fund the rental / purchase of a DAOstination and
@@ -90,13 +100,14 @@ export default function Index() {
                 week out of the year.
               </>
             }
-            title="DAOstination DAO"
             collaborationTasks={[
               "Create website UI/UX",
               "Write smart contracts",
               "DAO manager",
             ]}
+            twitterLink="https://twitter.com/DAOstination" // Add the Twitter link here
           />
+
           <Feature
             description={
               <>
