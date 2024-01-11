@@ -1,12 +1,10 @@
 import clsx from "clsx";
 import { GetServerSideProps } from "next";
-import { signIn } from "next-auth/react";
 import { ComponentProps, ReactNode } from "react";
 import { DASHBOARD_URL } from "../constants";
-import { SignInIcon } from "../icons";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
-import { Button, LinkButton } from "../primitives/Button";
+import { LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
 import styles from "./index.module.css";
 
@@ -41,10 +39,7 @@ export default function Index() {
         </div>
 
         <div className={styles.heroActions}>
-          <Button icon={<SignInIcon />} onClick={() => signIn()}>
-            Sign in
-          </Button>
-          <a
+          <LinkButton
             className="mr-10 NavLink product"
             href="https://collaborating.deform.cc/fantom"
             target="_blank"
@@ -55,7 +50,7 @@ export default function Index() {
             <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
               Form to Collaborate
             </span>
-          </a>
+          </LinkButton>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
             target="_blank"
