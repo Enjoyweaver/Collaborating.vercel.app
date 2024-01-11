@@ -60,18 +60,21 @@ export default function Index() {
             Collaborating on Fantom
           </h1>
           <p className={styles.heroLead}>
-            Review the items and projects below wanting your collaboration, and
-            if you want to complete any, then fill out the form to collaborate.
+            Everyone is invited to collaborate here on Fantom by completing a
+            task or by listing a task needing collaboration.
           </p>
+          <br />
           <p className={styles.heroLead}>
             Whether you want to list your project or list your skills for
             collaboration, this is the place to do it and you can fill out the
             same form below, which was created using DeForm App.
           </p>
+          <br />
           <p className={styles.heroLead}>
             As of now, all collaboration will be funded by several tokens, with
             the first one being Kissing Beaver, which was created solely to fund
-            collaboration on Fantom. Each month, we receive 273,420,000 (
+            collaboration on Fantom. Starting February 1st, 2024 and each month
+            for the next 24 months, we will receive 273,420,000
             <a
               href="https://ftmscan.com/token/0x20f4e1977be369ac53e847715aaeb9e0f3302ccb"
               target="_blank"
@@ -79,9 +82,7 @@ export default function Index() {
             >
               $beaver
             </a>
-            ) tokens and will distribute them to the collaborators for that
-            month, and will soon build a dashboard showing the previous
-            collaborations.
+            tokens and distribute them to the collaborators for that month.
           </p>
         </div>
 
