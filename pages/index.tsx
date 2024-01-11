@@ -55,7 +55,7 @@ export default function Index() {
         </div>
 
         <div className={styles.heroActions}>
-          <LinkButton
+          <a
             className="mr-10 NavLink product"
             href="https://collaborating.deform.cc/fantom"
             target="_blank"
@@ -66,7 +66,7 @@ export default function Index() {
             <span style={{ color: "var(--nav3)", fontSize: "1.2rem" }}>
               Form to Collaborate
             </span>
-          </LinkButton>
+          </a>
           <LinkButton
             href="https://liveblocks.io/docs/guides/nextjs-starter-kit"
             target="_blank"
