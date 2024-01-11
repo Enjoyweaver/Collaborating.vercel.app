@@ -11,13 +11,30 @@ import styles from "./index.module.css";
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   description: ReactNode;
   title: ReactNode;
+  collaborationTasks?: string[]; // Added collaborationTasks prop
 }
 
-function Feature({ title, description, className, ...props }: FeatureProps) {
+function Feature({
+  title,
+  description,
+  collaborationTasks,
+  className,
+  ...props
+}: FeatureProps) {
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
       <h4 className={styles.featuresFeatureTitle}>{title}</h4>
       <p className={styles.featuresFeatureDescription}>{description}</p>
+      {collaborationTasks && (
+        <div className={styles.collaborationTasks}>
+          <h5>Collaboration Tasks</h5>
+          <ul>
+            {collaborationTasks.map((task, index) => (
+              <li key={index}>{task}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
@@ -31,10 +48,11 @@ export default function Index() {
             Collaborating on Fantom
           </h1>
           <p className={styles.heroLead}>
-            After your submission on Collaborating.X is reviewed and accepted,
-            this is where you will come to sign in and collaborate with that
-            protocol. You can learn more about how this collaborative app was
-            built below.
+            Review the items and projects below wanting your collaboration, and
+            if you want to complete them then fill out the form below. Whether
+            you want to list your project or list your skills for collaboration,
+            this is the place to do it and you can fill out the same form below,
+            which was created using DeForm App.
           </p>
         </div>
 
@@ -56,12 +74,77 @@ export default function Index() {
             target="_blank"
             variant="secondary"
           >
-            Learn more
+            Learn more about this collaboration app
           </LinkButton>
         </div>
       </Container>
       <Container className={styles.section}>
-        <h2 className={styles.sectionTitle}>Features</h2>
+        <h2 className={styles.sectionTitle}>
+          Projects on Fantom currently wanting your collaboration
+        </h2>
+        <div className={styles.featuresGrid}>
+          <Feature
+            description={
+              <>
+                Members fund the rental / purchase of a DAOstination and
+                examples could be a large house for themselves for ETH Denver or
+                a downtown bungalow in San Francisco that each member gets a
+                week out of the year.
+              </>
+            }
+            title="DAOstination DAO"
+          />
+          <Feature
+            description={
+              <>
+                Best practices followed, using a mixture of SSR and custom API
+                endpoints. Modify documents from both client and server.
+              </>
+            }
+            title="Next.js"
+          />
+          <Feature
+            description={
+              <>
+                Adjust our reusable interface & design system to fit your needs.
+              </>
+            }
+            title="User Interface"
+          />
+          <Feature
+            description={
+              <>
+                All custom client and server functions are fully typed, and easy
+                to update.
+              </>
+            }
+            title="TypeScript"
+          />
+          <Feature
+            description={
+              <>
+                Complete authentication, compatible with any NextAuth provider,
+                including GitHub, Google, Auth0, and many more.
+              </>
+            }
+            title="NextAuth.js"
+          />
+          <Feature
+            description={
+              <>
+                See data update live using the SWR (state-while-revalidate)
+                library.
+              </>
+            }
+            title="SWR"
+          />
+        </div>
+      </Container>
+      <Container className={styles.section}>
+        <h2 className={styles.sectionTitle}>
+          Below are the features describing the Liveblocks collaborative app we
+          are using.
+        </h2>
         <div className={styles.featuresGrid}>
           <Feature
             description={
