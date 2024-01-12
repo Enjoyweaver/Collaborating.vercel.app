@@ -12,7 +12,9 @@ interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   description: ReactNode;
   title: ReactNode;
   collaborationTasks?: string[];
-  twitterLink?: string; // Add the twitterLink property
+  twitterLink?: string;
+  shortTwitterLink?: string; // Add the shortTwitterLink property
+  domainName?: string;
 }
 
 function Feature({
@@ -20,13 +22,15 @@ function Feature({
   description,
   collaborationTasks,
   className,
-  twitterLink, // Add a new prop for the Twitter link
+  twitterLink,
+  shortTwitterLink, // Add a new prop for the shortTwitterLink
+  domainName,
   ...props
 }: FeatureProps) {
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
       <h4 className={styles.featuresFeatureTitle}>
-        {twitterLink ? ( // Check if twitterLink is provided
+        {twitterLink ? (
           <a href={twitterLink} target="_blank" rel="noopener noreferrer">
             {title}
           </a>
@@ -47,6 +51,20 @@ function Feature({
           </ul>
         </div>
       )}
+      <br />
+      {shortTwitterLink && (
+        <p>
+          Twitter:{" "}
+          <a
+            href={`https://twitter.com/${shortTwitterLink}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`@${shortTwitterLink}`}
+          </a>
+        </p>
+      )}
+      {domainName && <p>Domain: {domainName}</p>}
     </div>
   );
 }
@@ -109,18 +127,15 @@ export default function Index() {
         <h2 className={styles.sectionTitle}>
           Current projects wanting your collaboration
         </h2>
-        <h4 className={styles.sectionSubtitle}>
-          Clicking on the projects title will navigate you to their twitter.
-        </h4>
         <div className={styles.featuresGrid}>
           <Feature
             title="DAOstination DAO"
             description={
               <>
-                Members fund the rental / purchase of a DAOstination and
-                examples could be a large house for themselves for ETH Denver or
-                a downtown bungalow in San Francisco that each member gets a
-                week out of the year.
+                Members fund the rental / purchase of DAOstinations with
+                examples being a large house for themselves for ETH Denver or a
+                downtown bungalow in San Francisco that each member gets a week
+                out of the year. Or a sailboat. Lets just dao it.
               </>
             }
             collaborationTasks={[
@@ -129,6 +144,8 @@ export default function Index() {
               "DAO manager",
             ]}
             twitterLink="https://twitter.com/DAOstination"
+            shortTwitterLink="DAOstination"
+            domainName="DAOstination.DAO (not built yet)"
           />
 
           <Feature
@@ -143,9 +160,10 @@ export default function Index() {
             collaborationTasks={[
               "Design and build smart contracts to pay collaborators",
               "Help design and build the UI/UX to pay collaborators",
-              "DAO manager",
             ]}
             twitterLink="https://twitter.com/_Collaborating"
+            shortTwitterLink="_Collaborating"
+            domainName="Collaborating.vercel.app"
           />
           <Feature
             description={
@@ -160,6 +178,8 @@ export default function Index() {
               "Help design and build the UI/UX to pay DAOsigners",
             ]}
             twitterLink="https://twitter.com/DAOsignrApparel"
+            shortTwitterLink="DAOsignrApparel"
+            domainName="DAOsignerApparel.com"
           />
           <Feature
             description={
@@ -175,6 +195,8 @@ export default function Index() {
               "Brainstorm DAO ideas",
             ]}
             twitterLink="https://twitter.com/_DAOlicious"
+            shortTwitterLink="_DAOlicious"
+            domainName="DAOlicious.X (not built yet)"
           />
           <Feature
             description={
@@ -190,6 +212,8 @@ export default function Index() {
               "Create NFTs for almost every project listed here",
             ]}
             twitterLink="https://twitter.com/Motivate__Labs"
+            shortTwitterLink="Motivate__Labs"
+            domainName="none yet"
           />
           <Feature
             description={
@@ -204,6 +228,8 @@ export default function Index() {
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/FantomFluid"
+            shortTwitterLink="FantomFluid"
+            domainName="none yet"
           />
           <Feature
             description={
@@ -220,6 +246,8 @@ export default function Index() {
               "Design subscription system",
             ]}
             twitterLink="https://twitter.com/HappyNewsDAO"
+            shortTwitterLink="HappyNewsDAO"
+            domainName="HappyNews.DAO"
           />
           <Feature
             description={
@@ -235,6 +263,8 @@ export default function Index() {
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/ProvenanceDeFi"
+            shortTwitterLink="ProvenanceDeFi"
+            domainName="ProvenanceFinancial.Crypto (not built yet)"
           />
           <Feature
             description={
@@ -250,6 +280,8 @@ export default function Index() {
               "Help design and build the UI/UX to pay authors and writers",
             ]}
             twitterLink="https://twitter.com/WriteOnDAO"
+            shortTwitterLink="WriteOnDAO"
+            domainName="WriteOn.DAO (not built yet)"
           />
           <Feature
             description={
@@ -264,6 +296,8 @@ export default function Index() {
               "Brainstorm DAO ideas",
             ]}
             twitterLink="https://twitter.com/DAOcumentaryDAO"
+            shortTwitterLink="DAOcumentaryDAO"
+            domainName="DAOcumentary.DAO (not built yet)"
           />
           <Feature
             description={
@@ -280,6 +314,8 @@ export default function Index() {
               "DAO manager",
             ]}
             twitterLink="https://twitter.com/inDAOpendent"
+            shortTwitterLink="inDAOpendent"
+            domainName="inDAOpendent.DAO (not built yet)"
           />
           <Feature
             description={
@@ -288,13 +324,15 @@ export default function Index() {
                 this DAO encompassing the most enthusiastic DAO-believers.
               </>
             }
-            title="DAO_or_Die"
+            title="DAO or Die"
             collaborationTasks={[
               "Create logo and banner",
               "Brainstorm DAO_or_Die ideas",
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/DAO_or_Die"
+            shortTwitterLink="DAO_or_Die"
+            domainName="DAOorDie.DAO (not built yet)"
           />
           <Feature
             description={
@@ -310,17 +348,21 @@ export default function Index() {
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/inDAOment"
+            shortTwitterLink="inDAOment"
+            domainName="inDAOment.DAO (not built yet)"
           />
           <Feature
             description={
               <>Where DAOs will be defined, ranked, and accredited.</>
             }
-            title="in_DAO_We_Trust"
+            title="In DAO We Trust"
             collaborationTasks={[
               "Create logo and banner",
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/in_DAO_We_Trust"
+            shortTwitterLink="in_DAO_We_Trust"
+            domainName="inDAOWeTrust.DAO (not built yet)"
           />
           <Feature
             description={
@@ -336,6 +378,8 @@ export default function Index() {
               "Create discord for future members",
             ]}
             twitterLink="https://twitter.com/RayvolutionDAO"
+            shortTwitterLink="RayvolutionDAO"
+            domainName="Rayvolution.DAO"
           />
           <Feature
             description={
@@ -352,14 +396,18 @@ export default function Index() {
               "DAO manager",
             ]}
             twitterLink="https://twitter.com/inDAOpendent"
+            shortTwitterLink="inDAOpendent"
+            domainName="inDAOpendence.DAO (not built yet)"
           />
           <Feature
             description={
               <>
-                NFTs that create a collage once they are all purchased and
-                visible on our website. Each collage will be displayed one at a
-                time on our website and then sold with the profits supporting
-                the artist. Lets see how artistic you can get.
+                NFTs that create a collage as they are purchased and displayed
+                on our website. Each collage will be displayed one at a time on
+                our website and then sold with the marjority of the profits
+                supporting the artist while a small portion supports the DAO
+                members approving the artists and managing the DAO. Lets see how
+                artistic you can get.
               </>
             }
             title="Collage DAO"
@@ -369,6 +417,8 @@ export default function Index() {
               "Write smart contracts identify NFT holders and displaying the collages.",
             ]}
             twitterLink="https://twitter.com/CollageDAO"
+            shortTwitterLink="CollageDAO"
+            domainName="Collaging.DAO"
           />
         </div>
       </Container>
