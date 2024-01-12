@@ -29,4 +29,8 @@ export const groups: Group[] = [
     id: "DAOstination",
     name: "DAOstination",
   },
+  {
+    id: "Fantom Fluid",
+    name: "Fantom Fluid",
+  },
 ];

@@ -19,7 +19,7 @@ export const users: Omit<User, "color">[] = [
   */
   {
     id: "enjoyweaver@gmail.com",
-    name: "Michael Weaver",
+    name: "EnjoyWeaver",
     avatar: "https://liveblocks.io/avatars/avatar-2.png",
     groupIds: [
       "Creators",
@@ -28,6 +28,7 @@ export const users: Omit<User, "color">[] = [
       "Love on FTM",
       "Bedrock Finance",
       "DAOstination",
+      "Fantom Fluid",
     ],
   },
   {
@@ -35,5 +36,11 @@ export const users: Omit<User, "color">[] = [
     name: "Bidlo Perv",
     avatar: "https://liveblocks.io/avatars/avatar-3.png",
     groupIds: ["Love on FTM", "Kissing Beaver"],
+  },
+  {
+    id: "bertrand.juglas@arthera.net",
+    name: "Bertux",
+    avatar: "https://liveblocks.io/avatars/avatar-3.png",
+    groupIds: ["Fantom Fluid"],
   },
 ];
