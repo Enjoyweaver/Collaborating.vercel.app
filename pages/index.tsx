@@ -310,7 +310,6 @@ export default function Index() {
               "Design and build website",
             ]}
             twitterLink="https://twitter.com/inDAOment"
-            s
           />
           <Feature
             description={
@@ -369,6 +368,7 @@ export default function Index() {
               "Improve website",
               "Write smart contracts identify NFT holders and displaying the collages.",
             ]}
+            twitterLink="https://twitter.com/CollageDAO"
           />
         </div>
       </Container>
