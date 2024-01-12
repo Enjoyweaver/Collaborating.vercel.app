@@ -18,7 +18,13 @@ export function AuthenticationLayout({
   return (
     <div className={clsx(className, styles.container)} {...props}>
       <main className={styles.main}>
-        <h2 className={styles.title}>Sign in to your account</h2>
+        <h2 className={styles.title}>
+          {" "}
+          Once your project has been listed for collaboration, or you have been
+          approved to collaborate on a project, this is where you can sign in to
+          collaborate. Just select your name below and sign-in with your email
+          that you used to sign up with. No password required.
+        </h2>
         {providers && providers.credentials ? (
           <DemoLogin />
         ) : (
