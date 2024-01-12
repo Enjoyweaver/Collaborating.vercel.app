@@ -313,7 +313,7 @@ export default function Index() {
           />
           <Feature
             description={
-              <>Where DAO's will be defined, ranked, and accredited.</>
+              <>Where DAOs will be defined, ranked, and accredited.</>
             }
             title="in_DAO_We_Trust"
             collaborationTasks={[
@@ -356,7 +356,7 @@ export default function Index() {
           <Feature
             description={
               <>
-                NFT's that create a collage once they are all purchased and
+                NFTs that create a collage once they are all purchased and
                 visible on our website. Each collage will be displayed one at a
                 time on our website and then sold with the profits supporting
                 the artist. Lets see how artistic you can get.
