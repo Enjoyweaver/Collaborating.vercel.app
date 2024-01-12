@@ -109,6 +109,9 @@ export default function Index() {
         <h2 className={styles.sectionTitle}>
           Current projects wanting your collaboration
         </h2>
+        <h4 className={styles.sectionSubtitle}>
+          Clicking on the projects title will navigate you to their twitter.
+        </h4>
         <div className={styles.featuresGrid}>
           <Feature
             title="DAOstination DAO"
@@ -265,30 +268,106 @@ export default function Index() {
           <Feature
             description={
               <>
-                Web3 risk and insurance. Right now our focus is on building an
-                exploit database and dashboard, exploit education, wallet
-                insurance, and certifying web3&apos;s future crypto auditors,
-                underwriters, and actuaries.
+                A DAO for you to decide with to do with, so join the Discord and
+                help us decide.
               </>
             }
-            title="inDemniFi Crypto"
+            title="inDAOpendent"
             collaborationTasks={[
-              "Help write ",
+              "Create logo and banner",
+              "Brainstorm inDAOpendent ideas",
               "Design and build website",
-              "Create NFTs for almost every project listed here",
+              "DAO manager",
             ]}
+            twitterLink="https://twitter.com/inDAOpendent"
           />
           <Feature
             description={
               <>
-                Forking SuperFluid to make Fantom Fluid, which will be the first
-                DeFi protocol on Fantom that allows for streaming payments.
+                This is a DAO for you to decide what to do with, but I imagine
+                this DAO encompassing the most enthusiastic DAO-believers.
               </>
             }
-            title="Fantom Fluid"
+            title="DAO_or_Die"
             collaborationTasks={[
-              "Assist in implementing Fantom Fluid",
+              "Create logo and banner",
+              "Brainstorm DAO_or_Die ideas",
               "Design and build website",
+            ]}
+            twitterLink="https://twitter.com/DAO_or_Die"
+          />
+          <Feature
+            description={
+              <>
+                A DAO for you to decide what to do with though will probably
+                fund DAO startups that propel Fantom forward.
+              </>
+            }
+            title="inDAOment"
+            collaborationTasks={[
+              "Create logo and banner",
+              "Brainstorm inDAOment ideas",
+              "Design and build website",
+            ]}
+            twitterLink="https://twitter.com/inDAOment"
+            s
+          />
+          <Feature
+            description={
+              <>Where DAO's will be defined, ranked, and accredited.</>
+            }
+            title="in_DAO_We_Trust"
+            collaborationTasks={[
+              "Create logo and banner",
+              "Design and build website",
+            ]}
+            twitterLink="https://twitter.com/in_DAO_We_Trust"
+          />
+          <Feature
+            description={
+              <>
+                Where members fund solar farms, own each panel individually, and
+                get paid for the energy produced in Fantom.
+              </>
+            }
+            title="Rayvolution DAO"
+            collaborationTasks={[
+              "Help design DAO and sub-DAOs",
+              "Design and build website",
+              "Create discord for future members",
+            ]}
+            twitterLink="https://twitter.com/RayvolutionDAO"
+          />
+          <Feature
+            description={
+              <>
+                Yup, you read that right that, this is different than
+                inDAOpendent. So you decide what it does and how and get paid
+                for it.
+              </>
+            }
+            title="inDAOpendence"
+            collaborationTasks={[
+              "Brainstorm inDAOpendent ideas",
+              "Design and build website",
+              "DAO manager",
+            ]}
+            twitterLink="https://twitter.com/inDAOpendent"
+          />
+          <Feature
+            description={
+              <>
+                NFT's that create a collage once they are all purchased and
+                visible on our website. Each collage will be displayed one at a
+                time on our website and then sold with the profits supporting
+                the artist. Lets see how artistic you can get.
+              </>
+            }
+            title="Collage DAO"
+            collaborationTasks={[
+              "NFT artists",
+              "Improve website",
+              "Write smart contracts identify NFT holders and displaying the collages.",
             ]}
           />
         </div>
