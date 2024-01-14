@@ -22,8 +22,8 @@ export const groups: Group[] = [
     name: "Love on FTM",
   },
   {
-    id: "Bedrock Finance",
-    name: "Bedrock Finance",
+    id: "Kissing Beaver",
+    name: "Kissing Beaver",
   },
   {
     id: "DAOstination",
@@ -32,5 +32,9 @@ export const groups: Group[] = [
   {
     id: "Fantom Fluid",
     name: "Fantom Fluid",
+  },
+  {
+    id: "inDemniFi",
+    name: "inDemniFi",
   },
 ];
