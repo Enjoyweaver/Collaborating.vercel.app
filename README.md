@@ -22,7 +22,7 @@ To get started, you can visit [Collaborating](https://collaborating.vercel.app)
 to view the list of the projects seeking collaboration, fill out a form
 specifying which one, and then start collaborating if selected.
 
-# Thank you to all of the Collaborators below!
+## Thank you to all of the Collaborators below!
 
 Thanks goes to these wonderful people
 ([🐸](https://allcontributors.org/docs/en/emoji-key)):
@@ -33,7 +33,7 @@ Thanks goes to these wonderful people
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/enjoy_weaver/"><img src="https://avatars.githubusercontent.com/u/95450946?v=4" width="100px;" alt="Michael Weaver"/><br /><sub><b>Michael Weaver</b></sub></a><br /><a href="https://github.com/CollaboratingonFantom/Collaborations/commits?author=enjoyweaver" title="Code">Commits 💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/enjoy_weaver/"><img src="https://avatars.githubusercontent.com/u/95450946?v=4" width="100px;" alt="Michael Weaver"/><br /><sub><b>Michael Weaver</b></sub></a><br /><a href="https://github.com/Enjoyweaver/Collaborating.vercel.app/commits?author=enjoyweaver" title="Code">Commits 💻</a></td>
       
   </tbody>
 </table>
