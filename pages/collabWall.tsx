@@ -54,7 +54,6 @@ const WallOfCollaboration: React.FC = () => {
       month: "January",
       transactionHash: "to follow",
     },
-    // Add more collaboration data as needed
   ];
 
   return (
