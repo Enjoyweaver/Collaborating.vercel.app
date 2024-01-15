@@ -6,6 +6,7 @@ import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
 import { LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
+import { WallOfCollaboration } from "./collaboration";
 import styles from "./index.module.css";
 
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
@@ -25,6 +26,7 @@ function Feature({
   twitterLink,
   shortTwitterLink, // Add a new prop for the shortTwitterLink
   domainName,
+
   ...props
 }: FeatureProps) {
   return (
@@ -70,6 +72,10 @@ function Feature({
 }
 
 export default function Index() {
+  const collaborationSuccesses = [
+    "Collaboration Success! @BidloPerv collaborated with @KissingBeaver...",
+    "Collaboration Success! @BidloPerv collaborated with @_Collaborating...",
+  ];
   return (
     <MarketingLayout>
       <Container className={styles.section}>
@@ -104,7 +110,6 @@ export default function Index() {
             tokens and distribute them to the collaborators for that month.
           </p>
         </div>
-
         <div className={styles.heroActions}>
           <LinkButton
             className="mr-10 NavLink product"
@@ -123,6 +128,7 @@ export default function Index() {
           </LinkButton>
         </div>
       </Container>
+      <div id="projects"></div>
       <Container className={styles.section}>
         <h2 className={styles.sectionTitle}>
           Current projects wanting your collaboration
@@ -421,6 +427,13 @@ export default function Index() {
             domainName="Collaging.DAO"
           />
         </div>
+      </Container>
+      <div id="wall-of-collaboration"></div>
+      <h1 style={{ textAlign: "center", fontSize: "3em" }}>
+        Wall of Collaboration
+      </h1>
+      <Container className={styles.section}>
+        <WallOfCollaboration />
       </Container>
     </MarketingLayout>
   );

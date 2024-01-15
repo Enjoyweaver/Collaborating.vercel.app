@@ -80,3 +80,21 @@
   margin-left: 4px; /* Adjust the margin as needed */
   margin-right: 4px; /* Adjust the margin as needed */
 }
+
+.wallOfCollaboration {
+  margin-top: 40px;
+}
+
+.wallOfCollaborationTitle {
+  font-size: 1.8rem;
+  margin-bottom: 16px;
+}
+
+.collaborationSuccessesList {
+  list-style: none;
+  padding: 0;
+}
+
+.collaborationSuccessesList li {
+  margin-bottom: 8px;
+}
