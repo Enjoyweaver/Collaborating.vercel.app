@@ -20,7 +20,9 @@ starter-kit they have for team collaboration.
 
 To get started, you can visit [Collaborating](https://collaborating.vercel.app)
 to view the list of the projects seeking collaboration, fill out a form
-specifying which one, and then start collaborating if selected.
+specifying which one, and then start collaborating if selected. You are
+encouraged to list any tasks that you want collaboration on from the community
+as well, so lets build on Fantom.
 
 ## Thank you to all of the Collaborators below!
 
