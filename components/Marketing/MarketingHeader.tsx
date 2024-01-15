@@ -18,11 +18,11 @@ export function MarketingHeader({
         <Link href="/">
           <Logo />
         </Link>
-        <Link href="/#wall-of-collaboration">
-          <Button>Wall of Collaboration</Button>
-        </Link>
         <Link href="/#projects">
           <Button>Collaboration Wanted</Button>
+        </Link>
+        <Link href="/#wall-of-collaboration">
+          <Button>Wall of Collaboration</Button>
         </Link>
         <Button icon={<SignInIcon />} onClick={() => signIn()}>
           Sign in to collaborate

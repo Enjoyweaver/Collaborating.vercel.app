@@ -81,20 +81,8 @@
   margin-right: 4px; /* Adjust the margin as needed */
 }
 
-.wallOfCollaboration {
-  margin-top: 40px;
-}
-
-.wallOfCollaborationTitle {
-  font-size: 1.8rem;
-  margin-bottom: 16px;
-}
-
-.collaborationSuccessesList {
-  list-style: none;
-  padding: 0;
-}
-
-.collaborationSuccessesList li {
-  margin-bottom: 8px;
+.announcement {
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: 100px;
 }

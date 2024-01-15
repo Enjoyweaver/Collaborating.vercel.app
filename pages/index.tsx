@@ -72,10 +72,6 @@ function Feature({
 }
 
 export default function Index() {
-  const collaborationSuccesses = [
-    "Collaboration Success! @BidloPerv collaborated with @KissingBeaver...",
-    "Collaboration Success! @BidloPerv collaborated with @_Collaborating...",
-  ];
   return (
     <MarketingLayout>
       <Container className={styles.section}>
@@ -429,7 +425,9 @@ export default function Index() {
         </div>
       </Container>
       <div id="wall-of-collaboration"></div>
-      <h1 style={{ textAlign: "center", fontSize: "3em" }}>
+      <h1
+        style={{ textAlign: "center", fontSize: "3em", marginBottom: "-40px" }}
+      >
         Wall of Collaboration
       </h1>
       <Container className={styles.section}>

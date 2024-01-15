@@ -1,4 +1,7 @@
+// collaboration.tsx
+
 import React from "react";
+import styles from "./index.module.css";
 
 interface CollaborationItem {
   collaborator: string;
@@ -17,17 +20,46 @@ const Collaboration: React.FC<CollaborationItem> = ({
   month,
   transactionHash,
 }) => {
+  const collaboratorTwitterHandle = collaborator.replace(/^@/, ""); // Remove "@" from the handle
+  const protocolTwitterHandle = protocol.replace(/^@/, ""); // Remove "@" from the handle
+
   return (
     <div>
-      <div className="announcement">
+      <div className={styles.announcement}>
         <p>
           <strong>Collaboration Announcement!</strong>
         </p>
         <p>
-          {`@${collaborator} collaborated with @${protocol} to ${collaborationTask} and will be paid ${paidAmount} allocation for ${month}.`}
+          {`@`}
+          <a
+            href={`https://twitter.com/${collaboratorTwitterHandle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`${collaborator}`}
+          </a>
+          {` collaborated with `}
+          <a
+            href={`https://twitter.com/${protocolTwitterHandle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`@${protocol}`}
+          </a>
+          {` to ${collaborationTask} and will be paid ${paidAmount} allocation for ${month}.`}
         </p>
         <p>{`Transaction Hash: ${transactionHash}`}</p>
-        <p>Thank you for collaborating @{collaborator}!</p>
+        <p>
+          Thank you for collaborating @
+          <a
+            href={`https://twitter.com/${collaboratorTwitterHandle}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`${collaborator}`}
+          </a>
+          !
+        </p>
       </div>
     </div>
   );
@@ -41,7 +73,7 @@ const WallOfCollaboration: React.FC = () => {
       collaborationTask: "create twitter logo",
       paidAmount: "the max amount of 10% of the kissing beaver token",
       month: "January",
-      transactionHash: "to follow",
+      transactionHash: "to follow on 2/2/24",
     },
     {
       collaborator: "BidloPerv",
@@ -49,7 +81,7 @@ const WallOfCollaboration: React.FC = () => {
       collaborationTask: "create discord server",
       paidAmount: "the max amount of 10% of the kissing beaver token",
       month: "January",
-      transactionHash: "to follow",
+      transactionHash: "to follow on 2/2/24",
     },
   ];
 
