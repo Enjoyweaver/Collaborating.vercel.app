@@ -6,7 +6,7 @@ import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
 import { LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
-import { WallOfCollaboration } from "./collaboration";
+import WallOfCollaboration from "./collaboration";
 import styles from "./index.module.css";
 
 interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {

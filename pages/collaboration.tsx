@@ -33,7 +33,6 @@ const Collaboration: React.FC<CollaborationItem> = ({
   );
 };
 
-// Wall of Collaboration
 const WallOfCollaboration: React.FC = () => {
   const collaborationData = [
     {
@@ -63,4 +62,4 @@ const WallOfCollaboration: React.FC = () => {
   );
 };
 
-export { WallOfCollaboration, Collaboration };
+export default WallOfCollaboration;
