@@ -1,28 +1,13 @@
 @import "./normalize.css";
 
 :root {
-  --color-black: 0 0 0;
-  --color-white: 255 255 255;
-  --color-gray-50: 250 250 250;
-  --color-gray-100: 244 244 245;
-  --color-gray-150: 236 236 238;
-  --color-gray-200: 228 228 231;
-  --color-gray-250: 220 220 224;
-  --color-gray-300: 212 212 216;
-  --color-gray-350: 187 187 193;
-  --color-gray-400: 161 161 170;
-  --color-gray-450: 137 137 146;
-  --color-gray-500: 113 113 122;
-  --color-gray-550: 98 98 107;
-  --color-gray-600: 82 82 91;
-  --color-gray-650: 73 73 81;
-  --color-gray-700: 63 63 70;
-  --color-gray-750: 51 51 56;
-  --color-gray-800: 39 39 42;
-  --color-gray-850: 32 32 35;
-  --color-gray-900: 24 24 27;
-  --color-gray-950: 18 18 21;
-  --color-overlay: rgb(var(--color-black) / 60%);
+  background: black; /* Set black background */
+  background: linear-gradient(
+    to bottom right,
+    #001b3a,
+    #0049a6
+  ); /* Add a light blue gradient */
+  color: #d4eaff; /* Set lighter font color */
   --space-0: 0;
   --space-1: 0.125rem;
   --space-2: 0.25rem;
@@ -145,7 +130,7 @@ body {
   background: var(--color-surface-elevated);
   color: var(--color-text);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-  Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 html,

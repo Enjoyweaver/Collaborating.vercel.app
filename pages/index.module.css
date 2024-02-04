@@ -1,6 +1,10 @@
 .section {
   margin-top: var(--space-20);
   margin-bottom: var(--space-20);
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center;
+  text-align: center; /* Center text content */
 }
 
 .sectionTitle {
@@ -8,6 +12,7 @@
   font-size: var(--size-2xl);
   font-weight: 700;
   text-align: center;
+  color: #d4eaff; /* Set light blue color for section title */
 }
 
 .sectionSubtitle {
@@ -18,11 +23,11 @@
 }
 
 .heroTitle {
-  max-width: 400px;
   margin-bottom: var(--space-9);
   font-size: var(--size-4xl);
   font-weight: 800;
   line-height: 1.25;
+  text-align: center; /* Center the text */
 }
 
 .heroLead {
@@ -37,7 +42,9 @@
 
 .heroActions {
   display: flex;
+  flex-direction: column; /* Stack children vertically */
   gap: var(--space-6);
+  align-items: center; /* Center children horizontally */
 }
 
 .featuresGrid {
@@ -48,18 +55,26 @@
 
 .featuresFeature {
   padding: var(--space-9);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius);
+  border: 1px solid #2e61ee; /* Set border color to light blue */
+  border-radius: 20px; /* Add border-radius for soft edges */
+  background: rgba(
+    46,
+    97,
+    238,
+    0.2
+  ); /* Add a transparent background for a gradient effect */
 }
 
 .featuresFeatureTitle {
   margin-bottom: var(--space-4);
   font-weight: 600;
   text-align: center;
+  color: #2e61ee; /* Set light blue color for feature title */
 }
 
 .featuresFeatureDescription {
   font-size: var(--size-sm);
+  color: #d4eaff; /* Set light blue color for feature description */
 }
 
 .collaborationTasks {
@@ -84,5 +99,23 @@
 .announcement {
   margin-bottom: 40px;
   max-width: 700px;
-  margin-left: 100px;
+}
+
+.lightBlueLink {
+  color: #2e61ee;
+}
+
+.pill-outline {
+  border: 2px solid white;
+  border-radius: 50px; /* Adjust as needed for desired roundedness */
+  padding: 10px 20px; /* Adjust padding as needed */
+}
+
+.pill-outline:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Add a subtle background on hover */
 }

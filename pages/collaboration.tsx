@@ -32,6 +32,7 @@ const Collaboration: React.FC<CollaborationItem> = ({
         <p>
           {`@`}
           <a
+            className={styles.lightBlueLink} // Apply the new class here
             href={`https://twitter.com/${collaboratorTwitterHandle}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -40,6 +41,7 @@ const Collaboration: React.FC<CollaborationItem> = ({
           </a>
           {` collaborated with `}
           <a
+            className={styles.lightBlueLink} // Apply the new class here
             href={`https://twitter.com/${protocolTwitterHandle}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -48,10 +50,11 @@ const Collaboration: React.FC<CollaborationItem> = ({
           </a>
           {` to ${collaborationTask} and will be paid ${paidAmount} allocation for ${month}.`}
         </p>
-        <p>{`Transaction Hash: ${transactionHash}`}</p>
+
         <p>
           Thank you for collaborating @
           <a
+            className={styles.lightBlueLink} // Apply the new class here
             href={`https://twitter.com/${collaboratorTwitterHandle}`}
             target="_blank"
             rel="noopener noreferrer"
@@ -59,6 +62,17 @@ const Collaboration: React.FC<CollaborationItem> = ({
             {`${collaborator}`}
           </a>
           !
+        </p>
+        <p>
+          The transaction hash is{" "}
+          <a
+            className={styles.lightBlueLink} // Apply the new class here
+            href={`${transactionHash}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {`${transactionHash}`}
+          </a>
         </p>
       </div>
     </div>
@@ -82,7 +96,8 @@ const WallOfCollaboration: React.FC = () => {
       collaborationTask: "create discord server",
       paidAmount: "the max amount of 10% of the kissing beaver token",
       month: "January",
-      transactionHash: "to follow on 2/2/24",
+      transactionHash:
+        "https://ftmscan.com/tx/0x79be2545170fe5b0423efbc705171e68e1b0f4c1d46adc2e8835e6261a5ac098",
     },
   ];
 
