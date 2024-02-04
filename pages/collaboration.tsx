@@ -73,7 +73,8 @@ const WallOfCollaboration: React.FC = () => {
       collaborationTask: "create twitter logo",
       paidAmount: "the max amount of 10% of the kissing beaver token",
       month: "January",
-      transactionHash: "to follow on 2/2/24",
+      transactionHash:
+        "https://ftmscan.com/tx/0x654c64a91c6eae704897189827df6d8a818ae6be33e2e901601c7a74d350e6e2",
     },
     {
       collaborator: "BidloPerv",
