@@ -77,11 +77,11 @@ export default function Index() {
       <Container className={styles.section}>
         <div className={styles.heroInfo}>
           <h1 className={styles.heroTitle} style={{ whiteSpace: "nowrap" }}>
-            Collaborating on Fantom
+            Collaborating
           </h1>
           <p className={styles.heroLead}>
-            Everyone is invited to collaborate here on Fantom by completing a
-            task or by listing a task needing collaboration.
+            Everyone is invited to collaborate here by completing a task or by
+            listing a task needing collaboration.
           </p>
           <br />
           <p className={styles.heroLead}>

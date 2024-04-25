@@ -17,7 +17,7 @@ export default function App({
   return (
     <>
       <Head>
-        <title>Collaborating on Fantom</title>
+        <title>Collaborating</title>
         <link href="/twitterLogo.png" rel="icon" type="image/png" />
       </Head>
       <TooltipProvider>
