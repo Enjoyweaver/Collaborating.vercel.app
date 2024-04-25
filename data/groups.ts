@@ -14,10 +14,6 @@ export const groups: Group[] = [
     name: "Collaborators",
   },
   {
-    id: "Collaborating",
-    name: "Collaborating",
-  },
-  {
     id: "Love on FTM",
     name: "Love on FTM",
   },
@@ -26,8 +22,8 @@ export const groups: Group[] = [
     name: "Kissing Beaver",
   },
   {
-    id: "DAOstination",
-    name: "DAOstination",
+    id: "Daostination",
+    name: "Daostination",
   },
   {
     id: "Fantom Fluid",
