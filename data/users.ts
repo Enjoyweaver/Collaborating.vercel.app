@@ -27,7 +27,7 @@ export const users: Omit<User, "color">[] = [
       "Collaborating",
       "Love on FTM",
       "Kissing Beaver",
-      "DAOstination",
+      "Daostination",
       "Fantom Fluid",
       "inDemniFi",
     ],
@@ -48,6 +48,6 @@ export const users: Omit<User, "color">[] = [
     id: "gabrielreyesordeix@gmail.com",
     name: "wnmnsr",
     avatar: "https://liveblocks.io/avatars/avatar-3.png",
-    groupIds: ["Collaborators", "daostination"],
+    groupIds: ["Collaborators", "Daostination"],
   },
 ];

@@ -14,7 +14,7 @@ export function MarketingFooter({
   return (
     <footer className={clsx(className, styles.footer)} {...props}>
       <Container className={styles.container}>
-        <span className={styles.copyright}>Collaborating on Fantom</span>
+        <span className={styles.copyright}>Collaborating</span>
         <LinkButton
           href="https://github.com/enjoyweaver/collaborating.vercel.app"
           icon={<GitHubIcon />}

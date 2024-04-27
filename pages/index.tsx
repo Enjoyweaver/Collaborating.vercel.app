@@ -124,7 +124,7 @@ export default function Index() {
         </h2>
         <div className={styles.featuresGrid}>
           <Feature
-            title="DAOstination DAO"
+            title="Daostination"
             description={
               <>
                 Members fund the rental / purchase of DAOstinations with
