@@ -77,11 +77,11 @@ export default function Index() {
       <Container className={styles.section}>
         <div className={styles.heroInfo}>
           <h1 className={styles.heroTitle} style={{ whiteSpace: "nowrap" }}>
-            Collaborating
+            Collaborating with Weaver
           </h1>
           <p className={styles.heroLead}>
-            Everyone is invited to collaborate here by completing a task or by
-            listing a task needing collaboration.
+            These are projects that I want to work on and build over time,
+            though you are encouraged to assist in building them too.
           </p>
           <br />
           <p className={styles.heroLead}>
@@ -92,9 +92,9 @@ export default function Index() {
           <br />
           <p className={styles.heroLead}>
             As of now, all collaboration will be funded with the Kissing Beaver
-            token, which was created solely to fund collaboration on Fantom.
-            Starting February 1st, 2024 and each month for the next 24 months,
-            we will receive 273,420,000
+            token, which was created solely to fund collaboration. Starting
+            February 1st, 2024 and each month for the next 24 months, we will
+            receive 273,420,000
             <a
               href="https://ftmscan.com/token/0x20f4e1977be369ac53e847715aaeb9e0f3302ccb"
               target="_blank"
@@ -120,14 +120,14 @@ export default function Index() {
       <div id="projects"></div>
       <Container className={styles.section}>
         <h2 className={styles.sectionTitle}>
-          Current projects wanting your collaboration
+          Current projects I want collaboration on:
         </h2>
         <div className={styles.featuresGrid}>
           <Feature
             title="Daostination"
             description={
               <>
-                Members fund the rental / purchase of DAOstinations with
+                Members fund the rental / purchase of daostinations with
                 examples being a large house for themselves for ETH Denver or a
                 downtown bungalow in San Francisco that each member gets a week
                 out of the year. Or a sailboat. Lets just dao it.
@@ -141,24 +141,6 @@ export default function Index() {
             twitterLink="https://twitter.com/DAOstination"
             shortTwitterLink="DAOstination"
             domainName="DAOstination.DAO (not built yet)"
-          />
-
-          <Feature
-            description={
-              <>
-                Where projects come to collaborate on Fantom. Whether you need
-                collaboration or want to collaborate, this is where you
-                collaborate on Fantom.
-              </>
-            }
-            title="Collaborating"
-            collaborationTasks={[
-              "Design and build smart contracts to pay collaborators",
-              "Help design and build the UI/UX to pay collaborators",
-            ]}
-            twitterLink="https://twitter.com/_Collaborating"
-            shortTwitterLink="_Collaborating"
-            domainName="Collaborating.vercel.app"
           />
           <Feature
             description={
@@ -196,18 +178,18 @@ export default function Index() {
           <Feature
             description={
               <>
-                Making 3D art for projects on Fantom, whether its NFTs or 3D
-                models for games, we are here to collaborate.
+                Making 3D art for projects, whether its NFTs or 3D models for
+                games, we are here to collaborate.
               </>
             }
-            title="Motivate Labs"
+            title="Motivational Labs"
             collaborationTasks={[
               "Create 3D logo",
               "Design and build website",
               "Create NFTs for almost every project listed here",
             ]}
-            twitterLink="https://twitter.com/Motivate__Labs"
-            shortTwitterLink="Motivate__Labs"
+            twitterLink="https://twitter.com/MotivationaLabs"
+            shortTwitterLink="MotivationaLabs"
             domainName="none yet"
           />
           <Feature
@@ -230,14 +212,14 @@ export default function Index() {
             description={
               <>
                 Fresh News from Fresh Voices. Happy News is where new
-                journalists start their career, propvide fresh news, and get
-                paid with Fantom.
+                journalists start their career, provide fresh news, and get paid
+                with crypto.
               </>
             }
             title="Happy News DAO"
             collaborationTasks={[
               "Write fresh news articles",
-              "Write smart contracts to pay journalists in fantom daily",
+              "Write smart contracts to pay journalists in crypto daily",
               "Design subscription system",
             ]}
             twitterLink="https://twitter.com/HappyNewsDAO"
@@ -247,9 +229,9 @@ export default function Index() {
           <Feature
             description={
               <>
-                Provenance DeFi will be where you on-board fiat to Fantom and
-                where artists prove provenance and get paid forever for their
-                work.
+                Provenance DeFi will be where you on-board fiat, pay less for
+                swaps, and where artists prove provenance and get paid forever
+                for their work.
               </>
             }
             title="Provenace DeFi"
@@ -261,23 +243,7 @@ export default function Index() {
             shortTwitterLink="ProvenanceDeFi"
             domainName="ProvenanceFinancial.Crypto (not built yet)"
           />
-          <Feature
-            description={
-              <>
-                Some writers deserve to be onchain, some stories deserve to be
-                read on a timeline, but all authors deserve to be paid fairly.
-              </>
-            }
-            title="Write On DAO"
-            collaborationTasks={[
-              "Create logo and banner",
-              "Design and build website",
-              "Help design and build the UI/UX to pay authors and writers",
-            ]}
-            twitterLink="https://twitter.com/WriteOnDAO"
-            shortTwitterLink="WriteOnDAO"
-            domainName="WriteOn.DAO (not built yet)"
-          />
+
           <Feature
             description={
               <>
@@ -333,7 +299,7 @@ export default function Index() {
             description={
               <>
                 A DAO for you to decide what to do with though will probably
-                fund DAO startups that propel Fantom forward.
+                fund DAO startups.
               </>
             }
             title="inDAOment"
@@ -363,7 +329,7 @@ export default function Index() {
             description={
               <>
                 Where members fund solar farms, own each panel individually, and
-                get paid for the energy produced in Fantom.
+                get paid for the energy produced.
               </>
             }
             title="Rayvolution DAO"
