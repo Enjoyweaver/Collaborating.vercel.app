@@ -77,12 +77,8 @@ export default function Index() {
       <Container className={styles.section}>
         <div className={styles.heroInfo}>
           <h1 className={styles.heroTitle} style={{ whiteSpace: "nowrap" }}>
-            Collaborating with Weaver
+            Collaborating
           </h1>
-          <p className={styles.heroLead}>
-            These are projects that I want to work on and build over time,
-            though you are encouraged to assist in building them too.
-          </p>
           <br />
           <p className={styles.heroLead}>
             Whether you want to list your project or list your skills for
