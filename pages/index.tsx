@@ -87,19 +87,8 @@ export default function Index() {
           </p>
           <br />
           <p className={styles.heroLead}>
-            As of now, all collaboration will be funded with the Kissing Beaver
-            token, which was created solely to fund collaboration. Starting
-            February 1st, 2024 and each month for the next 24 months, we will
-            receive 273,420,000
-            <a
-              href="https://ftmscan.com/token/0x20f4e1977be369ac53e847715aaeb9e0f3302ccb"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.linkWithSpace}
-            >
-              $beaver
-            </a>
-            tokens and distribute them to the collaborators for that month.
+            Collaborators will be airdropped tokens for collaborating, though
+            more on this later.
           </p>
         </div>
         <div className={styles.heroActions}>
