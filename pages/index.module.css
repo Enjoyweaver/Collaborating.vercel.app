@@ -1428,6 +1428,7 @@
     flex-direction: column;
     text-align: center;
     gap: 3rem;
+    align-items: center;
   }
 
   .heroTextWrapper {
@@ -1437,17 +1438,10 @@
     align-items: center;
   }
 
-  .heroTitle {
-    align-items: center;
-  }
-
-  .heroActions {
-    justify-content: center;
-  }
-
   .listProjectGrid {
     flex-direction: column;
     gap: 3rem;
+    align-items: center;
   }
 
   .listProjectContent {
@@ -1489,6 +1483,7 @@
   .processStep {
     flex-direction: column;
     text-align: center;
+    align-items: center;
   }
 
   .processStepContent {
@@ -1498,6 +1493,7 @@
 
   .filterContainer {
     flex-direction: column;
+    align-items: center;
   }
 
   .searchContainer {
@@ -1528,6 +1524,7 @@
   .heroActions {
     flex-direction: column;
     width: 100%;
+    align-items: center;
   }
 
   .featuresGrid {
@@ -1536,9 +1533,14 @@
 
   .socialLinks {
     flex-direction: column;
+    align-items: center;
   }
 
   .socialButton {
     width: 100%;
+  }
+
+  .section {
+    padding: 0 1rem;
   }
 }

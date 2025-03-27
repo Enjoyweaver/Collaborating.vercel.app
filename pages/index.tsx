@@ -35,7 +35,6 @@ function Feature({
   return (
     <div className={clsx(className, styles.featuresFeature)} {...props}>
       {category && <span className={styles.featureCategory}>{category}</span>}
-
       {image && (
         <div className={styles.featureImageContainer}>
           <img
@@ -45,7 +44,6 @@ function Feature({
           />
         </div>
       )}
-
       <h4 className={styles.featuresFeatureTitle}>
         {twitterLink ? (
           <a href={twitterLink} target="_blank" rel="noopener noreferrer">
@@ -55,9 +53,7 @@ function Feature({
           title
         )}
       </h4>
-
       <p className={styles.featuresFeatureDescription}>{description}</p>
-
       {collaborationTasks && collaborationTasks.length > 0 && (
         <div className={styles.collaborationTasks}>
           <h5 className={styles.collaborationTasksTitle}>Skills Needed</h5>
@@ -70,7 +66,6 @@ function Feature({
           </ul>
         </div>
       )}
-
       <div className={styles.featureFooter}>
         {shortTwitterLink && (
           <a
@@ -83,16 +78,13 @@ function Feature({
             {`@${shortTwitterLink}`}
           </a>
         )}
-
         {domainName && <div className={styles.domainBadge}>{domainName}</div>}
-
         <Button className={styles.applyButton}>Collaborate</Button>
       </div>
     </div>
   );
 }
 
-// Project Categories for filtering
 const categories = [
   "All Projects",
   "DAO",
@@ -103,12 +95,10 @@ const categories = [
 ];
 
 export default function Index() {
-  // Animation states
   const [scrollY, setScrollY] = useState(0);
   const [activeCategory, setActiveCategory] = useState("All Projects");
   const [isHeroVisible, setIsHeroVisible] = useState(true);
 
-  // Simulated scroll effect for parallax
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -160,13 +150,11 @@ export default function Index() {
                   <span className={styles.heroTitleLine}>Collaborate.</span>
                   <span className={styles.heroTitleLine}>Collect.</span>
                 </h1>
-
                 <p className={styles.heroLead}>
                   The ecosystem where projects meet talent. Complete meaningful
                   tasks, build your portfolio, and earn crypto tokens for your
                   collaboration.
                 </p>
-
                 <div className={styles.heroActions}>
                   <LinkButton
                     className={styles.primaryCTA}
@@ -176,7 +164,6 @@ export default function Index() {
                   >
                     <span>Join the Ecosystem</span>
                   </LinkButton>
-
                   <LinkButton
                     className={styles.secondaryCTA}
                     href="#list-project"
@@ -185,7 +172,6 @@ export default function Index() {
                   </LinkButton>
                 </div>
               </div>
-
               <div className={styles.heroGraphic}>
                 <div className={styles.orbitalSystem}>
                   <div className={styles.centralOrb}></div>
@@ -202,7 +188,6 @@ export default function Index() {
               </div>
             </div>
           </Container>
-
           <div className={styles.scrollIndicator}>
             <div className={styles.mouseIcon}>
               <div className={styles.mouseScroll}></div>
@@ -219,7 +204,6 @@ export default function Index() {
             <span className={styles.sectionTitleHighlight}>Tri-Value</span>{" "}
             Ecosystem
           </h2>
-
           <div className={styles.valueTriad}>
             <div className={styles.valueCard}>
               <div className={styles.valueIconWrapper}>
@@ -232,7 +216,6 @@ export default function Index() {
                 the globe.
               </p>
             </div>
-
             <div className={styles.valueCard}>
               <div className={styles.valueIconWrapper}>
                 <div className={styles.valueIcon}>🔄</div>
@@ -244,7 +227,6 @@ export default function Index() {
                 portfolio.
               </p>
             </div>
-
             <div className={styles.valueCard}>
               <div className={styles.valueIconWrapper}>
                 <div className={styles.valueIcon}>⚡</div>
@@ -266,7 +248,6 @@ export default function Index() {
             <span className={styles.sectionTitleHighlight}>Active</span>{" "}
             Collaborations
           </h2>
-
           <div className={styles.filterContainer}>
             {categories.map((category, index) => (
               <button
@@ -280,7 +261,6 @@ export default function Index() {
                 {category}
               </button>
             ))}
-
             <div className={styles.searchContainer}>
               <input
                 type="text"
@@ -289,142 +269,265 @@ export default function Index() {
               />
             </div>
           </div>
-
           <div className={styles.featuresGrid}>
             <Feature
               title="Daostination"
-              category="DAO"
-              image="/images/projects/daostination.png"
               description={
                 <>
-                  Members fund the rental/purchase of properties for communal
-                  use during events, vacations, or co-working spaces. From
-                  houses for ETH Denver to bungalows in San Francisco,
-                  we&apos;re building collective ownership through DAOs.
+                  Members fund the rental/purchase of daostinations with
+                  examples being a large house for ETH Denver or a downtown
+                  bungalow in San Francisco that each member gets a week out of
+                  the year. Or a sailboat. Lets just dao it.
                 </>
               }
               collaborationTasks={[
-                "UI/UX Designer",
-                "Smart Contract Developer",
-                "DAO Operations Manager",
+                "Create website UI/UX",
+                "Write smart contracts",
+                "DAO manager",
               ]}
               twitterLink="https://twitter.com/DAOstination"
               shortTwitterLink="DAOstination"
-              domainName="DAOstination.DAO"
+              domainName="DAOstination.DAO (not built yet)"
             />
-
             <Feature
               title="DAOsigner Apparel"
-              category="Fashion/DAO"
-              image="/images/projects/daosigner.png"
               description={
                 <>
-                  Empowering emerging fashion designers to launch their careers
-                  with global exposure and crypto compensation. We bridge the
-                  gap between traditional fashion and Web3.
+                  A place for aspiring fashion designers to start their career,
+                  get global exposure, and to get paid with Fantom.
                 </>
               }
               collaborationTasks={[
-                "Payment System Developer",
-                "UI/UX Designer",
-                "Fashion Tech Specialist",
+                "Design and build crypto payment system",
+                "Help design and build the UI/UX to pay DAOsigners",
               ]}
               twitterLink="https://twitter.com/DAOsignrApparel"
               shortTwitterLink="DAOsignrApparel"
               domainName="DAOsignerApparel.com"
             />
-
             <Feature
               title="DAOlicious"
-              category="Food/DAO"
-              image="/images/projects/daolicious.png"
               description={
                 <>
-                  A community-driven food project DAO that&apos;s still defining
-                  its mission. Join our Discord and help shape what this
-                  culinary collective will become.
+                  A DAO for foodies to collaborate on food projects, but this is
+                  for you to decide what this DAO does, so join the Discord and
+                  help us decide.
                 </>
               }
               collaborationTasks={[
-                "Logo Designer",
-                "Creative Strategist",
-                "Food Industry Expert",
+                "Create logo and banner",
+                "Brainstorm DAO ideas",
               ]}
               twitterLink="https://twitter.com/_DAOlicious"
               shortTwitterLink="_DAOlicious"
-              domainName="DAOlicious.X"
+              domainName="DAOlicious.X (not built yet)"
             />
-
             <Feature
               title="Motivational Labs"
-              category="NFT/3D Art"
-              image="/images/projects/motivational.png"
               description={
                 <>
-                  Creating immersive 3D art for NFT collections and gaming
-                  environments. Our team specializes in high-quality 3D models,
-                  animations, and digital experiences.
+                  Making 3D art for projects, whether its NFTs or 3D models for
+                  games, we are here to collaborate.
                 </>
               }
               collaborationTasks={[
-                "3D Artist",
-                "Web Developer",
-                "NFT Collection Designer",
+                "Create 3D logo",
+                "Design and build website",
+                "Create NFTs for almost every project listed here",
               ]}
               twitterLink="https://twitter.com/MotivationaLabs"
               shortTwitterLink="MotivationaLabs"
-              domainName="MotivationalLabs.io"
+              domainName="none yet"
             />
-
             <Feature
               title="Fantom Fluid"
-              category="DeFi"
-              image="/images/projects/fantomfluid.png"
               description={
                 <>
-                  Adapting SuperFluid for the Fantom ecosystem to enable
-                  streaming payments and real-time finance. The first streaming
-                  payment protocol on Fantom blockchain.
+                  Forking SuperFluid to make Fantom Fluid, which will be the
+                  first DeFi protocol on Fantom that allows for streaming
+                  payments.
                 </>
               }
               collaborationTasks={[
-                "Solidity Developer",
-                "Front-end Developer",
-                "DeFi Protocol Specialist",
+                "Assist in implementing Fantom Fluid",
+                "Design and build website",
               ]}
               twitterLink="https://twitter.com/FantomFluid"
               shortTwitterLink="FantomFluid"
-              domainName="FantomFluid.finance"
+              domainName="none yet"
             />
-
             <Feature
               title="Happy News DAO"
-              category="Media/DAO"
-              image="/images/projects/happynews.png"
               description={
                 <>
-                  Fresh News from Fresh Voices. Empowering emerging journalists
-                  with a platform for positive news and crypto compensation.
-                  Rebuilding trust in media through transparent,
-                  community-driven journalism.
+                  Fresh News from Fresh Voices. Happy News is where new
+                  journalists start their career, provide fresh news, and get
+                  paid with crypto.
                 </>
               }
               collaborationTasks={[
-                "Content Writer",
-                "Smart Contract Developer",
-                "Subscription System Designer",
+                "Write fresh news articles",
+                "Write smart contracts to pay journalists in crypto daily",
+                "Design subscription system",
               ]}
               twitterLink="https://twitter.com/HappyNewsDAO"
               shortTwitterLink="HappyNewsDAO"
               domainName="HappyNews.DAO"
             />
-
-            <div className={styles.showMoreContainer}>
-              <Button className={styles.showMoreButton}>
-                Explore More Projects{" "}
-                <span className={styles.arrowDown}>▼</span>
-              </Button>
-            </div>
+            <Feature
+              title="Provenace DeFi"
+              description={
+                <>
+                  Provenance DeFi will be where you on-board fiat, pay less for
+                  swaps, and where artists prove provenance and get paid forever
+                  for their work.
+                </>
+              }
+              collaborationTasks={[
+                "Help design a swap that favors the artists and daily users",
+                "Design and build website",
+              ]}
+              twitterLink="https://twitter.com/ProvenanceDeFi"
+              shortTwitterLink="ProvenanceDeFi"
+              domainName="ProvenanceFinancial.Crypto (not built yet)"
+            />
+            <Feature
+              title="DAOcumentary DAO"
+              description={
+                <>
+                  Members fund and decide on the documentary to be made and the
+                  DAOcumentary DAO will make it happen.
+                </>
+              }
+              collaborationTasks={[
+                "Create logo and banner",
+                "Brainstorm DAO ideas",
+              ]}
+              twitterLink="https://twitter.com/DAOcumentaryDAO"
+              shortTwitterLink="DAOcumentaryDAO"
+              domainName="DAOcumentary.DAO (not built yet)"
+            />
+            <Feature
+              title="inDAOpendent"
+              description={
+                <>
+                  A DAO for you to decide with to do with, so join the Discord
+                  and help us decide.
+                </>
+              }
+              collaborationTasks={[
+                "Create logo and banner",
+                "Brainstorm inDAOpendent ideas",
+                "Design and build website",
+                "DAO manager",
+              ]}
+              twitterLink="https://twitter.com/inDAOpendent"
+              shortTwitterLink="inDAOpendent"
+              domainName="inDAOpendent.DAO (not built yet)"
+            />
+            <Feature
+              title="DAO or Die"
+              description={
+                <>
+                  This is a DAO for you to decide what to do with, but I imagine
+                  this DAO encompassing the most enthusiastic DAO-believers.
+                </>
+              }
+              collaborationTasks={[
+                "Create logo and banner",
+                "Brainstorm DAO_or_Die ideas",
+                "Design and build website",
+              ]}
+              twitterLink="https://twitter.com/DAO_or_Die"
+              shortTwitterLink="DAO_or_Die"
+              domainName="DAOorDie.DAO (not built yet)"
+            />
+            <Feature
+              title="inDAOment"
+              description={
+                <>
+                  A DAO for you to decide what to do with though will probably
+                  fund DAO startups.
+                </>
+              }
+              collaborationTasks={[
+                "Create logo and banner",
+                "Brainstorm inDAOment ideas",
+                "Design and build website",
+              ]}
+              twitterLink="https://twitter.com/inDAOment"
+              shortTwitterLink="inDAOment"
+              domainName="inDAOment.DAO (not built yet)"
+            />
+            <Feature
+              title="In DAO We Trust"
+              description={
+                <>Where DAOs will be defined, ranked, and accredited.</>
+              }
+              collaborationTasks={[
+                "Create logo and banner",
+                "Design and build website",
+              ]}
+              twitterLink="https://twitter.com/in_DAO_We_Trust"
+              shortTwitterLink="in_DAO_We_Trust"
+              domainName="inDAOWeTrust.DAO (not built yet)"
+            />
+            <Feature
+              title="Rayvolution DAO"
+              description={
+                <>
+                  Where members fund solar farms, own each panel individually,
+                  and get paid for the energy produced.
+                </>
+              }
+              collaborationTasks={[
+                "Help design DAO and sub-DAOs",
+                "Design and build website",
+                "Create discord for future members",
+              ]}
+              twitterLink="https://twitter.com/RayvolutionDAO"
+              shortTwitterLink="RayvolutionDAO"
+              domainName="Rayvolution.DAO"
+            />
+            <Feature
+              title="inDAOpendence"
+              description={
+                <>
+                  Yup, you read that right that, this is different than
+                  inDAOpendent. So you decide what it does and how and get paid
+                  for it.
+                </>
+              }
+              collaborationTasks={[
+                "Brainstorm inDAOpendent ideas",
+                "Design and build website",
+                "DAO manager",
+              ]}
+              twitterLink="https://twitter.com/inDAOpendent"
+              shortTwitterLink="inDAOpendent"
+              domainName="inDAOpendence.DAO (not built yet)"
+            />
+            <Feature
+              title="Collage DAO"
+              description={
+                <>
+                  NFTs that create a collage as they are purchased and displayed
+                  on our website. Each collage will be displayed one at a time
+                  on our website and then sold with the marjority of the profits
+                  supporting the artist while a small portion supports the DAO
+                  members approving the artists and managing the DAO. Lets see
+                  how artistic you can get.
+                </>
+              }
+              collaborationTasks={[
+                "NFT artists",
+                "Improve website",
+                "Write smart contracts identify NFT holders and displaying the collages.",
+              ]}
+              twitterLink="https://twitter.com/CollageDAO"
+              shortTwitterLink="CollageDAO"
+              domainName="Collaging.DAO"
+            />
           </div>
         </Container>
       </div>
@@ -435,10 +538,8 @@ export default function Index() {
           <h2 className={styles.sectionTitle}>
             <span className={styles.sectionTitleHighlight}>How</span> It Works
           </h2>
-
           <div className={styles.processSteps}>
             <div className={styles.processLine}></div>
-
             <div className={styles.processStep}>
               <div className={styles.processStepNumber}>01</div>
               <div className={styles.processStepContent}>
@@ -449,7 +550,6 @@ export default function Index() {
                 </p>
               </div>
             </div>
-
             <div className={styles.processStep}>
               <div className={styles.processStepNumber}>02</div>
               <div className={styles.processStepContent}>
@@ -460,7 +560,6 @@ export default function Index() {
                 </p>
               </div>
             </div>
-
             <div className={styles.processStep}>
               <div className={styles.processStepNumber}>03</div>
               <div className={styles.processStepContent}>
@@ -471,7 +570,6 @@ export default function Index() {
                 </p>
               </div>
             </div>
-
             <div className={styles.processStep}>
               <div className={styles.processStepNumber}>04</div>
               <div className={styles.processStepContent}>
@@ -503,7 +601,6 @@ export default function Index() {
                 project to life. From UI designers to smart contract developers,
                 our ecosystem has the talent you need.
               </p>
-
               <div className={styles.listProjectBenefits}>
                 <div className={styles.benefitItem}>
                   <div className={styles.benefitIcon}>⚡</div>
@@ -518,7 +615,6 @@ export default function Index() {
                   <span>Accelerate development</span>
                 </div>
               </div>
-
               <LinkButton
                 className={styles.listProjectCTA}
                 href="https://collaborating.deform.cc/fantom"
@@ -528,7 +624,6 @@ export default function Index() {
                 <span>Launch Your Project</span>
               </LinkButton>
             </div>
-
             <div className={styles.listProjectVisual}>
               <div className={styles.projectLaunchAnimation}>
                 <div className={styles.launchPlatform}></div>
@@ -557,7 +652,6 @@ export default function Index() {
           <div className={styles.wallGridContainer}>
             <WallOfCollaboration />
           </div>
-
           <div className={styles.successMetricsContainer}>
             <div className={styles.successMetric}>
               <div className={styles.metricCircle}>
@@ -592,7 +686,6 @@ export default function Index() {
             Connect with other innovators, share ideas, and stay updated on new
             opportunities.
           </p>
-
           <div className={styles.socialLinks}>
             <a
               href="https://discord.gg/collaborating"
@@ -625,7 +718,6 @@ export default function Index() {
   );
 }
 
-// If logged in, redirect to dashboard
 export const getServerSideProps: GetServerSideProps = async ({ req, res }) => {
   const session = await Server.getServerSession(req, res);
 
