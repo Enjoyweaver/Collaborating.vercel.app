@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
-import { useEffect, useState, ComponentProps } from "react";
 import { signIn } from "next-auth/react";
+import { ComponentProps, useEffect, useState } from "react";
 import { SignInIcon } from "../../icons";
 import { Button } from "../../primitives/Button";
 import { Container } from "../../primitives/Container";
