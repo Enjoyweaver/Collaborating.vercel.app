@@ -16,8 +16,8 @@ interface FeatureProps extends Omit<ComponentProps<"div">, "title"> {
   twitterLink?: string;
   shortTwitterLink?: string;
   domainName?: string;
-  image?: string; // New prop for project image
-  category?: string; // New prop for project category
+  image?: string;
+  category?: string;
 }
 
 function Feature({
