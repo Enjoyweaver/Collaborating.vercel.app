@@ -4,7 +4,7 @@ import { ComponentProps, ReactNode } from "react";
 import { DASHBOARD_URL } from "../constants";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
-import { LinkButton, Button } from "../primitives/Button";
+import { Button, LinkButton } from "../primitives/Button";
 import { Container } from "../primitives/Container";
 import WallOfCollaboration from "./collaboration";
 import styles from "./index.module.css";
