@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { GetServerSideProps } from "next";
-import { ComponentProps, ReactNode } from "react";
+import { ComponentProps, ReactNode, useState, useEffect } from "react";
 import { DASHBOARD_URL } from "../constants";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
@@ -103,98 +103,168 @@ const categories = [
 ];
 
 export default function Index() {
+  // Animation states
+  const [scrollY, setScrollY] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("All Projects");
+  const [isHeroVisible, setIsHeroVisible] = useState(true);
+
+  // Simulated scroll effect for parallax
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+      setIsHeroVisible(window.scrollY < window.innerHeight * 0.8);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <MarketingLayout>
+      {/* Abstract Background Elements */}
+      <div className={styles.abstractElements}>
+        <div
+          className={styles.abstractCircle}
+          style={{ top: `${20 + scrollY * 0.05}%`, left: "10%" }}
+        ></div>
+        <div
+          className={styles.abstractCircle}
+          style={{ top: `${50 - scrollY * 0.02}%`, right: "15%" }}
+        ></div>
+        <div
+          className={styles.abstractSquare}
+          style={{ top: "30%", left: `${25 - scrollY * 0.03}%` }}
+        ></div>
+        <div
+          className={styles.abstractTriangle}
+          style={{ bottom: "20%", right: `${20 - scrollY * 0.01}%` }}
+        ></div>
+        <div
+          className={styles.glowingOrb}
+          style={{ top: "15%", left: "30%" }}
+        ></div>
+        <div
+          className={styles.glowingOrb}
+          style={{ bottom: "25%", right: "25%" }}
+        ></div>
+      </div>
+
       {/* Hero Section */}
       <div className={styles.heroWrapper}>
-        <Container className={styles.heroContainer}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              Build Together,{" "}
-              <span className={styles.heroTitleAccent}>Earn Together</span>
-            </h1>
+        <div className={styles.heroBackground}>
+          <Container className={styles.heroContainer}>
+            <div className={styles.heroContent}>
+              <div className={styles.heroTextWrapper}>
+                <h1 className={styles.heroTitle}>
+                  <span className={styles.heroTitleLine}>Connect.</span>
+                  <span className={styles.heroTitleLine}>Collaborate.</span>
+                  <span className={styles.heroTitleLine}>Collect.</span>
+                </h1>
 
-            <p className={styles.heroLead}>
-              Collaborating is the bridge connecting innovative projects with
-              skilled contributors. Complete tasks, build your portfolio, and
-              get rewarded with crypto tokens.
-            </p>
+                <p className={styles.heroLead}>
+                  The ecosystem where projects meet talent. Complete meaningful
+                  tasks, build your portfolio, and earn crypto tokens for your
+                  collaboration.
+                </p>
 
-            <div className={styles.heroActions}>
-              <LinkButton
-                className={styles.primaryCTA}
-                href="https://collaborating.deform.cc/fantom"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span>Start Collaborating</span>
-              </LinkButton>
+                <div className={styles.heroActions}>
+                  <LinkButton
+                    className={styles.primaryCTA}
+                    href="https://collaborating.deform.cc/fantom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>Join the Ecosystem</span>
+                  </LinkButton>
 
-              <LinkButton className={styles.secondaryCTA} href="#list-project">
-                <span>List Your Project</span>
-              </LinkButton>
+                  <LinkButton
+                    className={styles.secondaryCTA}
+                    href="#list-project"
+                  >
+                    <span>List Your Project</span>
+                  </LinkButton>
+                </div>
+              </div>
+
+              <div className={styles.heroGraphic}>
+                <div className={styles.orbitalSystem}>
+                  <div className={styles.centralOrb}></div>
+                  <div className={clsx(styles.orbit, styles.orbit1)}>
+                    <div className={styles.sateliteOrb}></div>
+                  </div>
+                  <div className={clsx(styles.orbit, styles.orbit2)}>
+                    <div className={styles.sateliteOrb}></div>
+                  </div>
+                  <div className={clsx(styles.orbit, styles.orbit3)}>
+                    <div className={styles.sateliteOrb}></div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
+          </Container>
 
-          <div className={styles.heroGraphic}>
-            {/* Animated connection lines could go here */}
-            <div className={styles.heroStats}>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>37+</span>
-                <span className={styles.statLabel}>Projects</span>
+          <div className={styles.scrollIndicator}>
+            <div className={styles.mouseIcon}>
+              <div className={styles.mouseScroll}></div>
+            </div>
+            <span>Explore the Ecosystem</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Value Proposition Section */}
+      <div className={styles.valueWrapper}>
+        <Container className={styles.section}>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.sectionTitleHighlight}>Tri-Value</span>{" "}
+            Ecosystem
+          </h2>
+
+          <div className={styles.valueTriad}>
+            <div className={styles.valueCard}>
+              <div className={styles.valueIconWrapper}>
+                <div className={styles.valueIcon}>🔍</div>
               </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>120+</span>
-                <span className={styles.statLabel}>Collaborators</span>
+              <h3 className={styles.valueCardTitle}>Connect</h3>
+              <p className={styles.valueCardDescription}>
+                Discover projects and talent aligned with your vision. Our
+                ecosystem brings together innovators and builders from across
+                the globe.
+              </p>
+            </div>
+
+            <div className={styles.valueCard}>
+              <div className={styles.valueIconWrapper}>
+                <div className={styles.valueIcon}>🔄</div>
               </div>
-              <div className={styles.statItem}>
-                <span className={styles.statNumber}>$45k+</span>
-                <span className={styles.statLabel}>Rewards Paid</span>
+              <h3 className={styles.valueCardTitle}>Collaborate</h3>
+              <p className={styles.valueCardDescription}>
+                Work together to transform ideas into reality. Complete
+                meaningful tasks that add value to projects and build your
+                portfolio.
+              </p>
+            </div>
+
+            <div className={styles.valueCard}>
+              <div className={styles.valueIconWrapper}>
+                <div className={styles.valueIcon}>⚡</div>
               </div>
+              <h3 className={styles.valueCardTitle}>Collect</h3>
+              <p className={styles.valueCardDescription}>
+                Earn crypto tokens for your contributions. Grow your stake in
+                the projects you help build and participate in their success.
+              </p>
             </div>
           </div>
         </Container>
       </div>
 
-      {/* How It Works Section */}
-      <Container className={styles.section}>
-        <h2 className={styles.sectionTitle}>How Collaborating Works</h2>
-
-        <div className={styles.processGrid}>
-          <div className={styles.processCard}>
-            <div className={styles.processIcon}>👥</div>
-            <h3 className={styles.processTitle}>Connect</h3>
-            <p className={styles.processDescription}>
-              Projects list their tasks and the specific skills they need.
-              Contributors find opportunities that match their expertise.
-            </p>
-          </div>
-
-          <div className={styles.processCard}>
-            <div className={styles.processIcon}>🔨</div>
-            <h3 className={styles.processTitle}>Contribute</h3>
-            <p className={styles.processDescription}>
-              Complete tasks on your own schedule. Submit your work and get
-              feedback directly from project owners.
-            </p>
-          </div>
-
-          <div className={styles.processCard}>
-            <div className={styles.processIcon}>💰</div>
-            <h3 className={styles.processTitle}>Collect</h3>
-            <p className={styles.processDescription}>
-              Get paid in crypto tokens when your contribution is accepted.
-              Build your portfolio and reputation.
-            </p>
-          </div>
-        </div>
-      </Container>
-
       {/* Project Listing Section */}
       <div id="projects" className={styles.projectsWrapper}>
         <Container className={styles.section}>
           <h2 className={styles.sectionTitle}>
-            Projects Seeking Collaboration
+            <span className={styles.sectionTitleHighlight}>Active</span>{" "}
+            Collaborations
           </h2>
 
           <div className={styles.filterContainer}>
@@ -203,8 +273,9 @@ export default function Index() {
                 key={index}
                 className={clsx(
                   styles.filterButton,
-                  index === 0 && styles.filterButtonActive
+                  category === activeCategory && styles.filterButtonActive
                 )}
+                onClick={() => setActiveCategory(category)}
               >
                 {category}
               </button>
@@ -348,131 +419,164 @@ export default function Index() {
               domainName="HappyNews.DAO"
             />
 
-            {/* Display Show More button after the first 6 projects */}
             <div className={styles.showMoreContainer}>
               <Button className={styles.showMoreButton}>
-                Show More Projects <span className={styles.arrowDown}>▼</span>
+                Explore More Projects{" "}
+                <span className={styles.arrowDown}>▼</span>
               </Button>
             </div>
           </div>
         </Container>
       </div>
 
-      {/* Value Proposition Section */}
-      <Container className={styles.section}>
-        <div className={styles.valueGrid}>
-          <div className={styles.valueContent}>
-            <h2 className={styles.valueTitle}>Why Use Collaborating?</h2>
+      {/* Collaboration Process Section */}
+      <div className={styles.processWrapper}>
+        <Container className={styles.section}>
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.sectionTitleHighlight}>How</span> It Works
+          </h2>
 
-            <div className={styles.valueItem}>
-              <div className={styles.valueIcon}>🌐</div>
-              <div>
-                <h3 className={styles.valueItemTitle}>Global Talent Network</h3>
-                <p className={styles.valueItemText}>
-                  Access skilled contributors from around the world and scale
-                  your project faster.
+          <div className={styles.processSteps}>
+            <div className={styles.processLine}></div>
+
+            <div className={styles.processStep}>
+              <div className={styles.processStepNumber}>01</div>
+              <div className={styles.processStepContent}>
+                <h3 className={styles.processStepTitle}>Discover</h3>
+                <p className={styles.processStepDescription}>
+                  Browse projects that match your interests and skills. Connect
+                  with innovators building the future.
                 </p>
               </div>
             </div>
 
-            <div className={styles.valueItem}>
-              <div className={styles.valueIcon}>🔐</div>
-              <div>
-                <h3 className={styles.valueItemTitle}>Transparent Rewards</h3>
-                <p className={styles.valueItemText}>
-                  All payments are on-chain, verifiable, and secure. No
-                  middlemen, no delays.
+            <div className={styles.processStep}>
+              <div className={styles.processStepNumber}>02</div>
+              <div className={styles.processStepContent}>
+                <h3 className={styles.processStepTitle}>Contribute</h3>
+                <p className={styles.processStepDescription}>
+                  Apply your skills to meaningful tasks. Complete work on your
+                  own schedule while building your portfolio.
                 </p>
               </div>
             </div>
 
-            <div className={styles.valueItem}>
-              <div className={styles.valueIcon}>🚀</div>
-              <div>
-                <h3 className={styles.valueItemTitle}>Own What You Build</h3>
-                <p className={styles.valueItemText}>
-                  Contributors receive tokens that can appreciate in value as
-                  projects grow.
+            <div className={styles.processStep}>
+              <div className={styles.processStepNumber}>03</div>
+              <div className={styles.processStepContent}>
+                <h3 className={styles.processStepTitle}>Verify</h3>
+                <p className={styles.processStepDescription}>
+                  Submit your work for review. Project owners validate
+                  contributions through our transparent process.
+                </p>
+              </div>
+            </div>
+
+            <div className={styles.processStep}>
+              <div className={styles.processStepNumber}>04</div>
+              <div className={styles.processStepContent}>
+                <h3 className={styles.processStepTitle}>Capitalize</h3>
+                <p className={styles.processStepDescription}>
+                  Receive crypto tokens for accepted contributions. Build your
+                  stake in the projects you help develop.
                 </p>
               </div>
             </div>
           </div>
-
-          <div className={styles.valueImage}>
-            {/* Placeholder for value image */}
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       {/* List Your Project Section */}
       <div id="list-project" className={styles.listProjectWrapper}>
+        <div className={styles.listProjectBackground}></div>
         <Container className={styles.section}>
-          <div className={styles.listProjectContent}>
-            <h2 className={styles.listProjectTitle}>
-              Got a Project? Need Help?
-            </h2>
-            <p className={styles.listProjectText}>
-              List your project on Collaborating and connect with talented
-              contributors who can help bring your vision to life. From UI
-              designers to smart contract developers, our community has the
-              skills you need.
-            </p>
+          <div className={styles.listProjectGrid}>
+            <div className={styles.listProjectContent}>
+              <h2 className={styles.listProjectTitle}>
+                <span className={styles.listProjectTitleHighlight}>
+                  Accelerate
+                </span>{" "}
+                Your Vision
+              </h2>
+              <p className={styles.listProjectText}>
+                Connect with skilled collaborators who can help bring your
+                project to life. From UI designers to smart contract developers,
+                our ecosystem has the talent you need.
+              </p>
 
-            <div className={styles.listProjectSteps}>
-              <div className={styles.listProjectStep}>
-                <span className={styles.stepNumber}>1</span>
-                <span className={styles.stepText}>
-                  Fill out our simple project form
-                </span>
+              <div className={styles.listProjectBenefits}>
+                <div className={styles.benefitItem}>
+                  <div className={styles.benefitIcon}>⚡</div>
+                  <span>Access global talent</span>
+                </div>
+                <div className={styles.benefitItem}>
+                  <div className={styles.benefitIcon}>🔐</div>
+                  <span>Transparent transactions</span>
+                </div>
+                <div className={styles.benefitItem}>
+                  <div className={styles.benefitIcon}>🚀</div>
+                  <span>Accelerate development</span>
+                </div>
               </div>
-              <div className={styles.listProjectStep}>
-                <span className={styles.stepNumber}>2</span>
-                <span className={styles.stepText}>
-                  Specify the skills you need
-                </span>
-              </div>
-              <div className={styles.listProjectStep}>
-                <span className={styles.stepNumber}>3</span>
-                <span className={styles.stepText}>
-                  Connect with talented contributors
-                </span>
-              </div>
+
+              <LinkButton
+                className={styles.listProjectCTA}
+                href="https://collaborating.deform.cc/fantom"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span>Launch Your Project</span>
+              </LinkButton>
             </div>
 
-            <LinkButton
-              className={styles.listProjectCTA}
-              href="https://collaborating.deform.cc/fantom"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <span>List Your Project</span>
-            </LinkButton>
+            <div className={styles.listProjectVisual}>
+              <div className={styles.projectLaunchAnimation}>
+                <div className={styles.launchPlatform}></div>
+                <div className={styles.launchRocket}>
+                  <div className={styles.rocketBody}></div>
+                  <div className={styles.rocketWindow}></div>
+                  <div className={styles.rocketFin}></div>
+                  <div className={styles.rocketFire}></div>
+                </div>
+                <div className={styles.launchSmoke}></div>
+              </div>
+            </div>
           </div>
         </Container>
       </div>
 
       {/* Wall of Collaboration */}
       <div id="wall-of-collaboration" className={styles.wallWrapper}>
-        <h2 className={styles.wallTitle}>Wall of Collaboration</h2>
+        <h2 className={styles.wallTitle}>
+          <span className={styles.wallTitleHighlight}>Success</span> Stories
+        </h2>
         <p className={styles.wallSubtitle}>
-          Celebrating successful collaborations and on-chain payments
+          Celebrating verified collaborations and on-chain payments
         </p>
         <Container className={styles.section}>
-          <WallOfCollaboration />
+          <div className={styles.wallGridContainer}>
+            <WallOfCollaboration />
+          </div>
 
           <div className={styles.successMetricsContainer}>
             <div className={styles.successMetric}>
-              <span className={styles.metricNumber}>52</span>
+              <div className={styles.metricCircle}>
+                <span className={styles.metricNumber}>52</span>
+              </div>
               <span className={styles.metricLabel}>
                 Completed Collaborations
               </span>
             </div>
             <div className={styles.successMetric}>
-              <span className={styles.metricNumber}>3</span>
+              <div className={styles.metricCircle}>
+                <span className={styles.metricNumber}>3</span>
+              </div>
               <span className={styles.metricLabel}>Blockchains</span>
             </div>
             <div className={styles.successMetric}>
-              <span className={styles.metricNumber}>18</span>
+              <div className={styles.metricCircle}>
+                <span className={styles.metricNumber}>18</span>
+              </div>
               <span className={styles.metricLabel}>Countries</span>
             </div>
           </div>
@@ -482,10 +586,11 @@ export default function Index() {
       {/* Join Community Section */}
       <Container className={styles.section}>
         <div className={styles.communityContainer}>
-          <h2 className={styles.communityTitle}>Join Our Community</h2>
+          <div className={styles.communityGlow}></div>
+          <h2 className={styles.communityTitle}>Join Our Ecosystem</h2>
           <p className={styles.communityText}>
-            Connect with other collaborators, share ideas, and stay updated on
-            new opportunities.
+            Connect with other innovators, share ideas, and stay updated on new
+            opportunities.
           </p>
 
           <div className={styles.socialLinks}>
