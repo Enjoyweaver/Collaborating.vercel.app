@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { GetServerSideProps } from "next";
-import { ComponentProps, ReactNode, useState, useEffect } from "react";
+import { ComponentProps, ReactNode, useEffect, useState } from "react";
 import { DASHBOARD_URL } from "../constants";
 import { MarketingLayout } from "../layouts/Marketing";
 import * as Server from "../lib/server";
