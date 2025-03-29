@@ -19,6 +19,7 @@ export default function App({
       <Head>
         <title>Collaborating</title>
         <link href="/twitterLogo.png" rel="icon" type="image/png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <TooltipProvider>
         <SessionProvider session={pageProps.session}>
